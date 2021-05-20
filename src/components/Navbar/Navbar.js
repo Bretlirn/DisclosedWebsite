@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './Navbar.css'
 import { Button } from '../Button'
 import logo from './logo.png'
+
 class Navbar extends Component{
     state = { clicked: false }
     handleClick = () => {
@@ -14,17 +15,17 @@ class Navbar extends Component{
         const MenuItems = [
             {
                 title: 'Home',
-                url: '#',
+                url: '/',
                 cName: 'nav-links'
             },
             {
                 title: 'Services',
-                url: '#',
+                url: '/Reports',
                 cName: 'nav-links'
             },
             {
                 title: 'Products',
-                url: '#',
+                url: '/Products',
                 cName: 'nav-links'
             },
             {

@@ -1,0 +1,35 @@
+.subscribe-form{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input{
+    height: 30px;
+    font-size: 20px;
+}
+
+.form-button{
+    background-color: red;
+    color: white;
+    padding: 5px 32px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-button:hover{
+    color: red;
+    background-color: white;
+    padding: 5px 32px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    transition: 250ms;
+    border-radius: 4px;
+}
