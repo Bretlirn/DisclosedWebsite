@@ -1,0 +1,13 @@
+.slideshow-container{
+    background: #666666;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+.first-img{
+    margin-left: -15px;
+}
+
+.second-img{
+    margin-left: 15px;
+}
