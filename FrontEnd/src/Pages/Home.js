@@ -4,7 +4,6 @@ import SpeakerPartners from '../components/SpeakerPartners/SpeakerPartners'
 function Home(){
     return(
         <div>
-            <Subscribe />
             <SpeakerPartners />
         </div>
     );

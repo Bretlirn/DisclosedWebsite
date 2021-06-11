@@ -1,56 +1,60 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect, useLayoutEffect} from 'react'
 import './SpeakerPartners.css'
 import ap from './ap.png'
 import dn from './dn.png'
 import jw from './jw.png'
 import md from './md.png'
 
-class SpeakerPartners extends Component{  
-    constructor(props) {
-        super(props);
-        
-        
-        this.switchImage = this.switchImage.bind(this);
-        this.state = {
-            currentImage: 0,
-            images: []
-        };
-    }
-
-  switchImage() {
-    if (this.state.currentImage < this.state.images.length - 2) {
-      this.setState({
-        currentImage: (this.state.currentImage + 2) % this.state.images.length
+function SpeakerPartners (props){
+    console.log("Hello Wrold!");
+    const [current_image, imageSwitch] = useState(0);
+    const [data, setData] = useState(null);
+    var updateData;
+    useEffect(() => {
+        fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'})
+            .then(response => {
+                if (response.ok){
+                    return response.json();
+                }
+                throw response;
+            })
+            .then (data => {
+                console.log("Looking at data", data);
+                setData(data);
+            })
+            .catch(error => {
+                console.log("Need to look at this", error);
+            })
+    }, [updateData]);
+    updateData = false;
+    var images = [ap,dn,jw];
+ 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            imageSwitch((current_image + 2) % images.length)
+        }, 2000);
+                   // clearing interval
+        return () => clearInterval(timer);
       });
-    } else {
-      this.setState({
-        currentImage: (this.state.currentImage + 2) % this.state.images.length
-      });
-    }
-    return this.currentImage;
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:5000/api/SpeakerPartners')
-        .then(response => response.json())
-        .then(data => {
-            for(var i = 0; i < data.length; i++){
-                this.setState({images: this.state.images.concat(data[i][1])})
-            }
-        })
-
-    setInterval(this.switchImage, 2000);
-  }
-    render(){
-        return(   
-        <div className="slideshow-container">
-            <span>Hello World!</span>
-            <span>{this.state.images.length}</span>
-            <span>{this.state.images[this.state.currentImage]}</span>
-            <span>{this.state.images[(this.state.currentImage+1) % this.state.images.length]}</span>
-        </div>
+      /*
+      <img src = "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt = "Opps" />
+      <img src = {images[(current_image+1) % images.length]} alt = "Opps" />
+      */
+    if(!data){
+        updateData = true;
+        return(
+            <div className="slideshow-container">
+                <span> --- Loading ---</span>
+            </div>
         );
     }
+    return(   
+        <div className="slideshow-container">
+            <span>{data.length}</span>
+            <img src = {data[(current_image) % data.length][1]} alt = "Opps" width = "250" height = "250"/>
+            <img src = {data[(current_image+1) % data.length][1]} alt = "Opps" width = "250" height = "250"/>
+        </div>
+    );
 }
 
 export default SpeakerPartners

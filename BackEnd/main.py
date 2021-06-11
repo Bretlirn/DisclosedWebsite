@@ -1,9 +1,17 @@
-from flask import Flask, jsonify, request
+
+from flask import Flask, jsonify, request, make_response
+from flask_cors import CORS, cross_origin
+
 import sqlite3
 
 import psycopg2
 
 app = Flask(__name__)
+
+def applyCors(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response
 
 conn = psycopg2.connect(
     host="localhost",
@@ -76,8 +84,8 @@ def getSpeakerPartners():
     if (request.method == 'GET'):
         cur.execute('Select * from "testSchema"."SpeakerPartners"')
         item = cur.fetchall()
-        cur.close()
-        return jsonify(item)
+        resp = jsonify(item)
+        return applyCors(resp)
     if (request.method == 'PUT'):
         new_item = request.get_json(force = True)
         try:
@@ -85,12 +93,12 @@ def getSpeakerPartners():
             conn.commit()
         except:
             cur.close()
-            return jsonify({'message': 'Error'})
-        if(cur.statusmessage == 'INSERT 0 1'):
-            cur.close()
-            return jsonify({'message' : 'Complete'})
+            resp = jsonify({'message': 'Bad Response'})
+            resp.status_code = 400
+            return applyCors(resp)
+        resp.set_data(jsonify({'message' : 'Complete'}))
         cur.close()
-        return jsonify({'message': 'Error'})
+        return applyCors(resp)
 
 if __name__ == "__main__":
     app.run(debug=True)
