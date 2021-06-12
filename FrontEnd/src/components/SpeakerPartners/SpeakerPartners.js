@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useLayoutEffect} from 'react'
 import './SpeakerPartners.css'
-import ap from './ap.png'
-import dn from './dn.png'
-import jw from './jw.png'
-import md from './md.png'
 
 function SpeakerPartners (props){
-    console.log("Hello Wrold!");
     const [current_image, imageSwitch] = useState(0);
     const [data, setData] = useState(null);
-    var updateData;
+    var updateData = false;
     useEffect(() => {
         fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'})
             .then(response => {
@@ -26,15 +21,15 @@ function SpeakerPartners (props){
                 console.log("Need to look at this", error);
             })
     }, [updateData]);
-    updateData = false;
-    var images = [ap,dn,jw];
- 
+
     useEffect(() => {
-        const timer = setInterval(() => {
-            imageSwitch((current_image + 2) % images.length)
-        }, 2000);
-                   // clearing interval
-        return () => clearInterval(timer);
+        if (data != null){
+            const timer = setInterval(() => {
+                imageSwitch((current_image + 8) % data.length)
+            }, 2000);
+            return () => clearInterval(timer);
+        }
+        // clearing interval
       });
       /*
       <img src = "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt = "Opps" />
@@ -43,16 +38,24 @@ function SpeakerPartners (props){
     if(!data){
         updateData = true;
         return(
-            <div className="slideshow-container">
-                <span> --- Loading ---</span>
+            <div className = "speaker-container">
+                <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
             </div>
         );
     }
     return(   
-        <div className="slideshow-container">
-            <span>{data.length}</span>
-            <img src = {data[(current_image) % data.length][1]} alt = "Opps" width = "250" height = "250"/>
-            <img src = {data[(current_image+1) % data.length][1]} alt = "Opps" width = "250" height = "250"/>
+        <div className = "speaker-container">
+            <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
+            <div className="slideshow-container">
+                <img src = 'https://imgbin.com/png/089ziDLi/glaxosmithkline-pakistan-company-pharmaceutical-industry-aptamer-group-limited-png' className = "img" alt = ""/>
+                <img src = {data[(current_image+1) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+2) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+3) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+4) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+5) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+6) % data.length][1]} className = "img" alt = ""/>
+                <img src = {data[(current_image+7) % data.length][1]} className = "img" alt = ""/>
+            </div>
         </div>
     );
 }
