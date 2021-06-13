@@ -1,0 +1,35 @@
+.speaker-container{
+    background: #666666;
+    height: 600px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.speaker-header{
+    color: #ffffff;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.6s;
+    transition-delay: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.slideshow-container{
+    position:relative;
+    height: 600px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.img{
+    padding: 10px;
+    width: 125px;
+    height: 125px;
+}
