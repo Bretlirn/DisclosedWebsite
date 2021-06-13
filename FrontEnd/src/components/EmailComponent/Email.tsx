@@ -16,18 +16,21 @@ const Email = () => {
 
   const [contactNumber, setContactNumber] = useState("000000");
   const [statusMessage, setStatusMessage] = useState("");
-  const errMsg = (err: any) => {return(
-    <div
-          role="alert"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            color: "red",
-          }}
-        >
-          {err.message}
-        </div>
-  )}
+
+  const errMsg = (err: any) => {
+    return(
+      <div
+        role="alert"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          color: "red",
+        }}
+      >
+        {err.message}
+      </div>
+    )
+  }
 
   React.useEffect(() => {
     if (isSubmitSuccessful) {
@@ -77,8 +80,8 @@ const Email = () => {
   return (
     <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" name="id" value={contactNumber} />
-      {errors.yourName && errMsg(errors.yourName)}
 
+      {errors.yourName && errMsg(errors.yourName)}
       <input
         className="Email-input"
         type="text"
@@ -93,8 +96,8 @@ const Email = () => {
       />
 
       <br />
-      {errors.email && errMsg(errors.email)}
 
+      {errors.email && errMsg(errors.email)}
       <input
         className="Email-input"
         type="email"
@@ -111,7 +114,6 @@ const Email = () => {
       <br />
 
       {errors.myMessage && errMsg(errors.myMessage)}
-
       <textarea
         className="Email-textarea"
         placeholder="Message"
@@ -137,7 +139,7 @@ const Email = () => {
         />
         <div className="message-chars-left">{messageCharsLeft}</div>
       </div>
-      <div style={{ color: "white" }} className="status-message">
+      <div className="status-message">
         {statusMessage}
       </div>
     </form>
