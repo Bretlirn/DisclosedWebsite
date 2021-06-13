@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/NavbarComponent/Navbar";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Reports from "./Pages/Reports";
-import Email from "./components/Email";
 
 function App() {
   return (
@@ -25,9 +24,6 @@ function App() {
             </Route>
           </Switch>
         </Router>
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Email />
       </div>
     </>
   );
