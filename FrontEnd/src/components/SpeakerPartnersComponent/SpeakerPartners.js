@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect} from 'react'
+import ReactCSSTransitionGroup from 'react-transition-group';
 import './SpeakerPartners.css'
 
 function SpeakerPartners (props){
@@ -21,20 +22,17 @@ function SpeakerPartners (props){
                 console.log("Need to look at this", error);
             })
     }, [updateData]);
-
-    useEffect(() => {
-        if (data != null){
-            const timer = setInterval(() => {
-                imageSwitch((current_image + 8) % data.length)
-            }, 2000);
-            return () => clearInterval(timer);
-        }
-        // clearing interval
-      });
       /*
       <img src = "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt = "Opps" />
       <img src = {images[(current_image+1) % images.length]} alt = "Opps" />
       */
+    useEffect(() => {
+        const items = data.map((item, i) => (
+            <div key={i} onClick={() => this.handleRemove(i)}>
+              {item}
+            </div>
+    }, [])
+
     if(!data){
         updateData = true;
         return(
