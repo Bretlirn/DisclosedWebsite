@@ -12,7 +12,18 @@ function SpeakerPartners (props){
     const [intermission, setIntermission] = useState(false);
     //functions
     const arrayColumn = (arr, n) => arr.map(x => x[n]);
-    
+    const cssTransitionFunction = (n) => {
+        return(
+            <CSSTransition 
+                in={animationState}
+                timeout={500}
+                unmountOnExit
+                classNames = 'img'
+                >
+                    <img src = {data[(current_image + n) % data.length]} className = "img-logo" alt = "opps"/>
+            </CSSTransition> 
+        );
+    };
     //variables
     var updateData = false;
 
@@ -146,32 +157,14 @@ function SpeakerPartners (props){
         <div className = "speaker-container">
             <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
             <div className="slideshow-container">
-                <CSSTransition 
-                in={animationState}
-                timeout={500}
-                unmountOnExit
-                classNames = 'img'
-                >
-                    <img src = {data[(current_image) % data.length]} className = "img-logo" alt = "opps"/>
-                </CSSTransition> 
-                
-                <CSSTransition 
-                in={animationState}
-                timeout={500}
-                unmountOnExit
-                classNames = 'img'
-                >
-                    <img src = {data[(current_image+1) % data.length]} className = "img-logo" alt = "opps"/>
-                </CSSTransition> 
-                
-                <CSSTransition 
-                in={animationState}
-                timeout={500}
-                unmountOnExit
-                classNames = 'img'
-                >
-                    <img src = {data[(current_image+2) % data.length]} className = "img-logo" alt = "opps"/>
-                </CSSTransition> 
+                {cssTransitionFunction(0)}
+                {cssTransitionFunction(1)}
+                {cssTransitionFunction(2)}
+                {cssTransitionFunction(3)}
+                {cssTransitionFunction(4)}
+                {cssTransitionFunction(5)}
+                {cssTransitionFunction(6)}
+                {cssTransitionFunction(7)}
                 
 
             </div>
