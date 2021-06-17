@@ -46,65 +46,6 @@ function SpeakerPartners (props){
             })
     }, [updateData]);
 
-      /*
-      <img src = "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt = "Opps" />
-      <img src = {images[(current_image+1) % images.length]} alt = "Opps" />
-      */
-
-
-    
-
-    //return
-    /*
-                <img src = 'https://imgbin.com/png/089ziDLi/glaxosmithkline-pakistan-company-pharmaceutical-industry-aptamer-group-limited-png' className = "img" alt = ""/>
-                <img src = {data[(current_image+1) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+2) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+3) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+4) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+5) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+6) % data.length][1]} className = "img" alt = ""/>
-                <img src = {data[(current_image+7) % data.length][1]} className = "img" alt = ""/>
-    */
-
-    /* 
-        
-                <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={300}>
-                {data}
-                </ReactCSSTransitionGroup> 
-    */
-    
-    
-    /*const imageAnimation = (n) => {
-        console.log(current_image);
-        imageSwitch((current_image + n) % data.length);
-        console.log(current_image);
-        console.log("Before Beggining:", animationState);
-        setAnimationState(!animationState);
-        console.log("After Beggining:", animationState);
-        setTimeout(() => {
-            console.log("Before End:", animationState);
-            setAnimationState(!animationState);
-            console.log("After End:", animationState);
-        }, 4000);
-    };
-    
-
-
-    useEffect(() => {
-        if (data != null){
-            const imageTimer = setInterval(() => {
-                imageAnimation(8);
-            }, 5000);
-            return () => {
-                clearInterval(imageTimer);
-            };
-        }
-        // clearing interval
-    });*/
-
     useEffect(() => {
         console.log("in fade In effect");
         if (data != null){
@@ -145,6 +86,7 @@ function SpeakerPartners (props){
         }
     }, [intermission, setIntermission]);
 
+    //rendering
     if(!data){
         updateData = true;
         return(
