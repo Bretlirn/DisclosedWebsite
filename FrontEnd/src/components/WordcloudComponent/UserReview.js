@@ -19,40 +19,41 @@ const options = {
 };
 
 function UserReview() {
+
     const [words, setWords] = useState([])
     const [wordName, setWordName] = useState("")
 
     const addWord = event => {
         event.preventDefault();
 
+        //default value and text
         var newWord = wordName;
-        for(var j = 0; j<words.length; j++){
-          if(wordName === words[j].text){
-            newWord = null;
-            break;
-          }
-          else{
-            newWord = wordName;
-          }
-        }
         var newCount = 1;
 
+        duplicateCheck();
+
         // console.log(words.length);
-        for(var i = 0; i<words.length; i++){
-          if(wordName === words[i].text){
-            newCount = words[i].value ++;
+
+        //check for duplicates in array, increase value if found
+        function duplicateCheck () {
+          for(var i = 0; i<words.length; i++){
+            if(wordName === words[i].text){
+              words[i].value ++;
+              newWord = null;
+              break;
+            }
           }
         }
-
-        //combine both loops into one, set the newcount variable globally
-
+        
+        //add word and count to array
         setWords([...words, {
             value: newCount,
             text: newWord
         }]);
         setWordName("");
     }
-
+    
+    //console log the array
     useEffect(() => {
         console.log(words)
       }, [words]);
