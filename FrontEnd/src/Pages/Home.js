@@ -1,16 +1,16 @@
 import React from 'react'
 import Subscribe from '../components/SubscribeComponent/Subscribe'
 import SpeakerPartners from '../components/SpeakerPartnersComponent/SpeakerPartners'
-import Email from "../components/EmailComponent/Email";
 import WordCloud from "../components/WordcloudComponent/WordCloud";
+import ContactUs from './ContactUs'
 function Home(){
     return(
         <div>
             <SpeakerPartners />
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <Email />
+            <ContactUs />
+            <div style = {{display: 'flex', justifyContent: 'center'}}>
+                <WordCloud />
             </div>
-            <WordCloud />
         </div>
     );
 }

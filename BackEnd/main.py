@@ -6,6 +6,11 @@ import sqlite3
 
 import psycopg2
 
+PG_HOST="localhost"
+PG_DB="postgres"
+PG_USER="postgres"
+PG_PW="password"
+
 app = Flask(__name__)
 
 def applyCors(response):
@@ -14,10 +19,10 @@ def applyCors(response):
     return response
 
 conn = psycopg2.connect(
-    host="localhost",
-    database="postgres",
-    user="postgres",
-    password="password")
+    host=PG_HOST,
+    database=PG_DB,
+    user=PG_USER,
+    password=PG_PW)
 
 @app.route('/', methods=['GET'])
 def hello_world():

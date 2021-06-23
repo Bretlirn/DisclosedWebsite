@@ -129,7 +129,6 @@ const Email = () => {
             },
           })}
         />
-        {errors.myMessage && errMsg(errors.myMessage, 0)}
         <div
         style={{
           display: "flex",
@@ -142,6 +141,7 @@ const Email = () => {
           type="submit"
           value="Send"
         />
+        {errors.myMessage && errMsg(errors.myMessage, 0)}
         <div className="message-chars-left">{messageCharsLeft}</div>
         </div>
       </div>
