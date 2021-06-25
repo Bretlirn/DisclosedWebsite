@@ -32,7 +32,11 @@ const ContactUs = () => {
                         </a>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div style={{display: "flex", justifyContent: "center", flexDirection:"column", width:'50%', background: "#00aaaa"}}> 
+=======
+                <div style={{display: "flex", justifyContent: "center", flexDirection:"column", width:'50%', background: "#ff0000"}}> 
+>>>>>>> a734fe88 (Fixed some css)
                     <div style =  {{display: "flex", justifyContent: "center", width:'100%', fontSize: "2.5rem", fontFamily: "Futura", color: "#ffffff",marginBottom:"-2px"}}>
                         <strong>T E L L</strong>
                     </div>

@@ -1,12 +1,20 @@
 import React from 'react'
 import Subscribe from '../components/SubscribeComponent/Subscribe'
 import SpeakerPartners from '../components/SpeakerPartnersComponent/SpeakerPartners'
+<<<<<<< HEAD
 import WordCloud from "../components/WordcloudComponent/WordCloud";
 import ContactUs from './ContactUs'
+=======
+import Email from "../components/EmailComponent/Email";
+import LinkedInLogo from '../Pictures/LinkedInLogo.png';
+import YouTubeLogo from '../Pictures/YouTubeLogo.png';
+import ContactUs from './ContactUs';
+>>>>>>> a734fe88 (Fixed some css)
 function Home(){
     return(
         <div>
             <SpeakerPartners />
+<<<<<<< HEAD
 <<<<<<< HEAD
             <ContactUs />
             <div style = {{display: 'flex', justifyContent: 'center'}}>
@@ -42,6 +50,9 @@ function Home(){
                 </div>
 >>>>>>> df4cb16f (Styling for Email)
             </div>
+=======
+            <ContactUs />
+>>>>>>> a734fe88 (Fixed some css)
         </div>
     );
 }
