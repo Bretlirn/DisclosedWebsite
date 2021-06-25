@@ -2,24 +2,28 @@
 from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS, cross_origin
 
-import sys
+#import sys
 
-sys.path.append('./data')
+#sys.path.append('./data')
 
-from pathlib import Path
+#from pathlib import Path
 
-my_file = Path("./data/database.py")
-if my_file.is_file():
-    from database import *
-    print(isAPI(isAPI)
-else:
-    PG_HOST="localhost"
-    PG_DB="postgres"
-    PG_USER="postgres"
-    PG_PW="password"
+PG_HOST="localhost"
+PG_DB="postgres"
+PG_USER="postgres"
+PG_PW="password"
+#my_file = Path("./data/database.py")
+#if my_file.is_file():
+#    from database import *
+#    print(isAPI(isAPI)
+#else:
+#    PG_HOST="localhost"
+#    PG_DB="postgres"
+#    PG_USER="postgres"
+#    PG_PW="password"
 
-    def isAPI(api):
-        return True
+#    def isAPI(api):
+#        return True
 
 import sqlite3
 
