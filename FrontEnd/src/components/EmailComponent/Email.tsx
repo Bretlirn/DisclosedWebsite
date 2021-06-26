@@ -19,11 +19,12 @@ const Email = () => {
   const [contactNumber, setContactNumber] = useState("000000");
   const [statusMessage, setStatusMessage] = useState("");
 
-  const errMsg = (err: any) => {
+  const errMsg = (err: any, margin: number) => {
     return(
       <div
         role="alert"
         style={{
+          marginBottom: margin,
           display: "flex",
           justifyContent: "center",
           color: "red",
@@ -88,49 +89,48 @@ const Email = () => {
         type="text"
         placeholder="Name"
         {...register("yourName", {
-          required: "This field is require!",
+          required: "Name is required.",
           maxLength: {
             value: 40,
             message: "You exceeded the maximum character!",
           },
         })}
       />
-      {errors.yourName && errMsg(errors.yourName)}
+      {errors.yourName && errMsg(errors.yourName, -32)}
 
       <br />
 
       <input
         className="Email-input"
-        style={{marginTop: 8}}
+        style={{marginTop: 24}}
         type="email"
         placeholder="Email"
         {...register("email", {
-          required: "This field is require!",
+          required: "Email is required.",
           maxLength: {
             value: 40,
             message: "You exceeded the maximum character!",
           },
         })}
       />
-      {errors.email && errMsg(errors.email)}
+      {errors.email && errMsg(errors.email, -32)}
 
       <br />
-
-      <textarea
-        className="Email-textarea"
-        style={{marginTop: 8}}
-        placeholder="Message"
-        {...register("myMessage", {
-          required: "This field is require!",
-          maxLength: {
-            value: 1500,
-            message: "You exceeded the maximum character!",
-          },
-        })}
-      />
-      {errors.myMessage && errMsg(errors.myMessage)}
-
-      <div
+      <div>
+        <textarea
+          className="Email-textarea"
+          style={{marginTop: 24}}
+          placeholder="Message"
+          {...register("myMessage", {
+            required: "Please enter a message.",
+            maxLength: {
+              value: 1500,
+              message: "You exceeded the maximum character!",
+            },
+          })}
+        />
+        {errors.myMessage && errMsg(errors.myMessage, 0)}
+        <div
         style={{
           display: "flex",
           flexDirection: "row",
@@ -138,12 +138,16 @@ const Email = () => {
         }}
       >
         <input
-          style={{ display: "flex", justifyContent: "center" }}
+          style={{ display: "flex", justifyContent: "center"}}
           type="submit"
           value="Send"
         />
         <div className="message-chars-left">{messageCharsLeft}</div>
+        </div>
       </div>
+
+
+      
       <div className="status-message">
         {statusMessage}
       </div>
