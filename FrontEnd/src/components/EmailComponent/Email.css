@@ -1,8 +1,10 @@
 .Email-input {
+  padding-top: 24;
   width: 600px;
 }
 
 .Email-textarea {
   height: 10em;
   width: 600px;
+  resize:none;
 }

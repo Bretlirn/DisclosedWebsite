@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { init, sendForm } from "emailjs-com";
 import "./Email.css";
@@ -34,7 +34,7 @@ const Email = () => {
     )
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isSubmitSuccessful) {
       reset({ yourName: "", email: "", myMessage: "" });
     }
@@ -83,7 +83,6 @@ const Email = () => {
     <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <input type="hidden" name="id" value={contactNumber} />
 
-      {errors.yourName && errMsg(errors.yourName)}
       <input
         className="Email-input"
         type="text"
@@ -96,12 +95,13 @@ const Email = () => {
           },
         })}
       />
+      {errors.yourName && errMsg(errors.yourName)}
 
       <br />
 
-      {errors.email && errMsg(errors.email)}
       <input
         className="Email-input"
+        style={{marginTop: 8}}
         type="email"
         placeholder="Email"
         {...register("email", {
@@ -112,12 +112,13 @@ const Email = () => {
           },
         })}
       />
+      {errors.email && errMsg(errors.email)}
 
       <br />
 
-      {errors.myMessage && errMsg(errors.myMessage)}
       <textarea
         className="Email-textarea"
+        style={{marginTop: 8}}
         placeholder="Message"
         {...register("myMessage", {
           required: "This field is require!",
@@ -127,6 +128,8 @@ const Email = () => {
           },
         })}
       />
+      {errors.myMessage && errMsg(errors.myMessage)}
+
       <div
         style={{
           display: "flex",
