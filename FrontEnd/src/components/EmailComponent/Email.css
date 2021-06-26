@@ -5,4 +5,5 @@
 .Email-textarea {
   height: 10em;
   width: 600px;
+  resize:none;
 }
