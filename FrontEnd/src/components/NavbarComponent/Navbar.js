@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-import './Navbar.css'
-import { Button } from '../Button'
-import logo from './logo.png'
+import './Navbar.css';
+import { Button } from '../Button';
+import logo from './logo.png';
+import { Link } from 'react-router-dom';
 
 function Navbar (props){
     const [clicked, setClicked] = useState(false)
@@ -30,12 +31,12 @@ function Navbar (props){
             title: 'Contact Us',
             url: '#',
             cName: 'nav-links'
-        },
+        }/*,
         {
-            title: 'Sign Up',
-            url: '#',
+            title: 'Watch on Youtube',
+            url: 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live',
             cName: 'nav-links-mobile'
-        }
+        }*/
     ]
     return(
         <nav className = 'NavbarItems'>
@@ -54,7 +55,9 @@ function Navbar (props){
                     )
                 })}
             </ul>
-            <Button> Sign Up </Button>
+            <div style = {{width: "350px"}}>
+                <Button children = "Watch on Youtube" width = '"400px"' onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live"/>
+            </div>
         </nav>
     );
 }

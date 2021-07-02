@@ -21,10 +21,7 @@
     "react-scripts": "4.0.3",
     "react-transition": "^1.0.3",
     "react-transition-group": "^4.4.2",
-<<<<<<< HEAD
     "react-wordcloud": "^1.2.7",
-=======
->>>>>>> a734fe88922836939200289a4fdecc0b7a4a7998
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"
   },

@@ -1,5 +1,6 @@
 .speaker-container{
-    background: #666666;
+    background: #444444;
+    /*  background-image: url("EasyImage.jpg"); */
     height: 600px;
     display:flex;
     flex-wrap: wrap;
