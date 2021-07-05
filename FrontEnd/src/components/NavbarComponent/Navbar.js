@@ -1,65 +1,65 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-import './Navbar.css'
-import { Button } from '../Button'
-import logo from './logo.png'
+import './Navbar.css';
+import { Button } from '../Button';
+import logo from './logo.png';
+import { Link } from 'react-router-dom';
 
-class Navbar extends Component{
-    state = { clicked: false }
-    handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
+function Navbar (props){
+    const [clicked, setClicked] = useState(false)
+    const handleClick = () => {
+        setClicked(!clicked);
     }
 
-
-    render(){
-        const MenuItems = [
-            {
-                title: 'Home',
-                url: '/',
-                cName: 'nav-links'
-            },
-            {
-                title: 'Services',
-                url: '/Reports',
-                cName: 'nav-links'
-            },
-            {
-                title: 'Products',
-                url: '/Products',
-                cName: 'nav-links'
-            },
-            {
-                title: 'Contact Us',
-                url: '#',
-                cName: 'nav-links'
-            },
-            {
-                title: 'Sign Up',
-                url: '#',
-                cName: 'nav-links-mobile'
-            }
-        ]
-        return(
-            <nav className = 'NavbarItems'>
-                <h1 className ='navbar-logo'>Disclosed<img src={logo} className = 'logo' alt = '???'/></h1>
-                <div className = 'menu-icon' onClick={this.handleClick}>
-                    <i className = {this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
-                <ul className = {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key = {index}>
-                                <a className = {item.cName} href = {item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-                <Button> Sign Up </Button>
-            </nav>
-        )
-    }
+    const MenuItems = [
+        {
+            title: 'Home',
+            url: '/',
+            cName: 'nav-links'
+        },
+        {
+            title: 'Services',
+            url: '/Reports',
+            cName: 'nav-links'
+        },
+        {
+            title: 'Products',
+            url: '/Products',
+            cName: 'nav-links'
+        },
+        {
+            title: 'Contact Us',
+            url: '#',
+            cName: 'nav-links'
+        }/*,
+        {
+            title: 'Watch on Youtube',
+            url: 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live',
+            cName: 'nav-links-mobile'
+        }*/
+    ]
+    return(
+        <nav className = 'NavbarItems'>
+            <h1 className ='navbar-logo'>Disclosed<img src={logo} className = 'logo' alt = '???'/></h1>
+            <div className = 'menu-icon' onClick={handleClick}>
+                <i className = {clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+            </div>
+            <ul className = {clicked ? 'nav-menu active' : 'nav-menu'}>
+                {MenuItems.map((item, index) => {
+                    return(
+                        <li key = {index}>
+                            <a className = {item.cName} href = {item.url}>
+                                {item.title}
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
+            <div style = {{width: "350px"}}>
+                <Button children = "Watch on Youtube" width = '"400px"' onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live"/>
+            </div>
+        </nav>
+    );
 }
 
 export default Navbar

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './SpeakerPartners.css';
 
@@ -29,41 +29,31 @@ function SpeakerPartners (props){
 
     //effects
     useEffect(() => {
-        fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'})
-            .then(response => {
-                if (response.ok){
-                    return response.json();
-                }
-                throw response;
-            })
-            .then (data => {
-                var item = arrayColumn(data,1);
+        async function fetchingAPI(){
+            const resp = await fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'});
+            if (resp.ok){
+                const respData = await resp.json();
+                const item = arrayColumn(respData,1);
                 setData(item);
                 setFadeIn(true);
-            })
-            .catch(error => {
-                console.log("Need to look at this", error);
-            })
+            }
+            else{
+                console.log("Something went wrong in fetching");
+            }
+        }
+        fetchingAPI();
     }, [updateData]);
 
     useEffect(() => {
-        console.log("in fade In effect");
         if (data != null){
             imageSwitch((current_image + 8) % data.length);
             setAnimationState(!animationState);
             setFadeOut(!fadeOut);
-            console.log("Current image: ", current_image);
-            console.log("Animation State: ", animationState);
-            console.log("Fade Out: ", fadeOut);
 
         }
     }, [fadeIn, setFadeIn]);
 
     useEffect(() => {
-        console.log("in fade Out effect");
-        console.log("Current image: ", current_image);
-        console.log("Animation State: ", animationState);
-        console.log("Fade Out: ", fadeOut);
         if (data != null){
             var imageTimeout =  setTimeout(() => {
                 setAnimationState(!animationState);
@@ -88,7 +78,7 @@ function SpeakerPartners (props){
 
     //rendering
     if(!data){
-        updateData = true;
+        updateData = !updateData;
         return(
             <div className = "speaker-container">
                 <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
