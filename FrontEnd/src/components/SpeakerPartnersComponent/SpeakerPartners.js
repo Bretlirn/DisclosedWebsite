@@ -42,20 +42,6 @@ function SpeakerPartners (props){
             }
         }
         fetchingAPI();
-            /* .then(response => {
-                if (response.ok){
-                    return response.json();
-                }
-                throw response;
-            })
-            .then (data => {
-                var item = arrayColumn(data,1);
-                setData(item);
-                setFadeIn(true);
-            })
-            .catch(error => {
-                console.log("Need to look at this", error);
-            })*/
     }, [updateData]);
 
     useEffect(() => {
