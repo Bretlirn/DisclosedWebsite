@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 import './Navbar.css';
 import { Button } from '../Button';
 import logo from './logo.png';
-import { Link } from 'react-router-dom';
 
-function Navbar (props){
+const Navbar = () => {
     const [clicked, setClicked] = useState(false)
     const handleClick = () => {
         setClicked(!clicked);
@@ -56,7 +55,7 @@ function Navbar (props){
                 })}
             </ul>
             <div style = {{width: "350px"}}>
-                <Button children = "Watch on Youtube" width = '"400px"' onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live"/>
+                <Button children = "Watch on Youtube" onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live" buttonStyle = "" buttonSizes = ""/>
             </div>
         </nav>
     );

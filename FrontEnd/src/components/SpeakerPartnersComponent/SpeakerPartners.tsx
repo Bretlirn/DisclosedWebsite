@@ -2,33 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './SpeakerPartners.css';
 
-function SpeakerPartners (props){
+const SpeakerPartners = () => {
     //states
     const [current_image, imageSwitch] = useState(0);
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [animationState, setAnimationState] = useState(false);
     const [fadeIn, setFadeIn] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
     const [intermission, setIntermission] = useState(false);
     //functions
-    const arrayColumn = (arr, n) => arr.map(x => x[n]);
-    const cssTransitionFunction = (n) => {
-        return(
-            <CSSTransition 
-                in={animationState}
-                timeout={500}
-                unmountOnExit
-                classNames = 'img'
-                >
-                    <img src = {data[(current_image + n) % data.length]} className = "img-logo" alt = "opps"/>
-            </CSSTransition> 
-        );
+    const arrayColumn = (arr:any, n:number) => arr.map((x:any) => x[n]);
+    const cssTransitionFunction = (n:number) => {
+        if(data.length !== 0){
+            return(
+                <CSSTransition 
+                    in={animationState}
+                    timeout={500}
+                    unmountOnExit
+                    classNames = 'img'
+                    >
+                        <img src = {data[(current_image + n) % data.length]} className = "img-logo" alt = "opps"/>
+                </CSSTransition> 
+            );
+        }
     };
     //variables
     var updateData = false;
 
     //effects
     useEffect(() => {
+        console.log("Hello World");
         async function fetchingAPI(){
             const resp = await fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'});
             if (resp.ok){
@@ -42,10 +45,14 @@ function SpeakerPartners (props){
             }
         }
         fetchingAPI();
+        
+        console.log("Done Fetching");
+        console.log("Printing out data: ", data);
     }, [updateData]);
 
     useEffect(() => {
-        if (data != null){
+        if (data.length !== 0){
+            console.log("In Fade In");
             imageSwitch((current_image + 8) % data.length);
             setAnimationState(!animationState);
             setFadeOut(!fadeOut);
@@ -54,7 +61,8 @@ function SpeakerPartners (props){
     }, [fadeIn, setFadeIn]);
 
     useEffect(() => {
-        if (data != null){
+        if (data.length !== 0){
+            console.log("In Fade Out");
             var imageTimeout =  setTimeout(() => {
                 setAnimationState(!animationState);
                 setIntermission(!intermission);
@@ -66,7 +74,8 @@ function SpeakerPartners (props){
     }, [fadeOut, setFadeOut]);
 
     useEffect(() => {
-        if (data != null){
+        if (data.length !== 0){
+            console.log("In intermission");
             var imageTimeout = setTimeout(() => {
                 setFadeIn(!fadeIn);
             }, 500);
@@ -77,11 +86,12 @@ function SpeakerPartners (props){
     }, [intermission, setIntermission]);
 
     //rendering
-    if(!data){
+    if (data.length === 0){
+        console.log("Uhhhhhh...", data.length)
         updateData = !updateData;
         return(
             <div className = "speaker-container">
-                <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
+                <h1 className = "speaker-header"><strong>Our Speakers are from ... Bruh</strong></h1>
             </div>
         );
     }    
