@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './SpeakerPartners.css';
@@ -31,7 +33,6 @@ const SpeakerPartners = () => {
 
     //effects
     useEffect(() => {
-        console.log("Hello World");
         async function fetchingAPI(){
             const resp = await fetch('http://localhost:5000/api/SpeakerPartners', {method: 'GET'});
             if (resp.ok){
@@ -45,14 +46,10 @@ const SpeakerPartners = () => {
             }
         }
         fetchingAPI();
-        
-        console.log("Done Fetching");
-        console.log("Printing out data: ", data);
     }, [updateData]);
 
     useEffect(() => {
         if (data.length !== 0){
-            console.log("In Fade In");
             imageSwitch((current_image + 8) % data.length);
             setAnimationState(!animationState);
             setFadeOut(!fadeOut);
@@ -62,7 +59,6 @@ const SpeakerPartners = () => {
 
     useEffect(() => {
         if (data.length !== 0){
-            console.log("In Fade Out");
             var imageTimeout =  setTimeout(() => {
                 setAnimationState(!animationState);
                 setIntermission(!intermission);
@@ -75,7 +71,6 @@ const SpeakerPartners = () => {
 
     useEffect(() => {
         if (data.length !== 0){
-            console.log("In intermission");
             var imageTimeout = setTimeout(() => {
                 setFadeIn(!fadeIn);
             }, 500);
@@ -87,11 +82,10 @@ const SpeakerPartners = () => {
 
     //rendering
     if (data.length === 0){
-        console.log("Uhhhhhh...", data.length)
         updateData = !updateData;
         return(
             <div className = "speaker-container">
-                <h1 className = "speaker-header"><strong>Our Speakers are from ... Bruh</strong></h1>
+                <h1 className = "speaker-header"><strong>Our Speakers are from ... </strong></h1>
             </div>
         );
     }    

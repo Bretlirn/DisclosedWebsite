@@ -1,5 +1,4 @@
 import React from 'react';
-import Subscribe from '../components/SubscribeComponent/Subscribe';
 import SpeakerPartners from '../components/SpeakerPartnersComponent/SpeakerPartners';
 import WordCloud from "../components/WordcloudComponent/WordCloud";
 import ContactUs from './ContactUs'
