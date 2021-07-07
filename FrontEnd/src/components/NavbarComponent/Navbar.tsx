@@ -54,7 +54,7 @@ const Navbar = () => {
                     )
                 })}
             </ul>
-            <div style = {{width: "350px"}}>
+            <div style = {{width: "200px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "10px"}}>
                 <Button children = "Watch on Youtube" onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live" buttonStyle = "" buttonSizes = ""/>
             </div>
         </nav>

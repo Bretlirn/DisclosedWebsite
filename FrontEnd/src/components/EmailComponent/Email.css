@@ -1,9 +1,9 @@
 .Email-input {
-  width: 600px;
+  width: 100%;
 }
 
 .Email-textarea {
   height: 10em;
-  width: 600px;
+  width: 100%;
   resize:none;
 }
