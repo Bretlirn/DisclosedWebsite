@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './Navbar.css';
-import { Button } from '../Button';
+import { Button } from '../ButtonComponent/Button';
 import logo from './logo.png';
 
 const Navbar = () => {

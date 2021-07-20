@@ -1,7 +1,7 @@
 import React from 'react';
 import SpeakerPartners from '../components/SpeakerPartnersComponent/SpeakerPartners';
 import WordCloud from "../components/WordcloudComponent/WordCloud";
-import ContactUs from './ContactUs'
+import ContactUs from '../components/ContactUsComponent/ContactUs'
 function Home(){
     return(
         <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Email from '../EmailComponent/Email';
-import LinkedInLogo from '../Pictures/LinkedInLogo.png';
-import YouTubeLogo from '../Pictures/YouTubeLogo.png';
+import LinkedInLogo from './LinkedInLogo.png';
+import YouTubeLogo from './YouTubeLogo.png';
 import './ContactUs.css'
 
 const ContactUs = () => {
@@ -32,17 +32,17 @@ const ContactUs = () => {
                         </a>
                     </div>
                 </div>
-                <div style={{display: "flex", justifyContent: "center", flexDirection:"column", width:'50%', background: "#00aaaa"}}> 
-                    <div style =  {{display: "flex", justifyContent: "center", width:'100%', fontSize: "2.5rem", fontFamily: "Futura", color: "#ffffff",marginBottom:"-2px"}}>
+                <div className = "email-component"> 
+                <div className = "contact-us-header">
                         <strong>T E L L</strong>
                     </div>
-                    <div style =  {{display: "flex", justifyContent: "center", width:'100%', fontSize: "2.5rem", fontFamily: "Futura", color: "#ffffff",marginBottom:"-2px"}}>
+                    <div className = "contact-us-header">
                         <strong>U S</strong>
                     </div>
-                    <div style={{display: "flex", justifyContent: "center", width:'100%', fontFamily: "Futura", marginBottom:"10px"}}>
-                            <strong><hr style = {{width: "200px", height: "10px", backgroundColor: "#ffffff"}}/></strong>
+                    <div className = "contact-us-bar-outer">
+                            <strong><hr className = "contact-us-bar-inner"/></strong>
                     </div>
-                    <div style={{display: "flex", justifyContent: "center", alignContent: "center", width:'100%'}}>
+                    <div className = "email-box">
                         <div style = {{width: '80%'}}>
                             <Email />
                         </div>
