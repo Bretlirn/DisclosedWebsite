@@ -17,20 +17,15 @@ const Navbar = () => {
             cName: 'nav-links'
         },
         {
-            title: 'Services',
+            title: 'About Us',
             url: '/Reports',
             cName: 'nav-links'
         },
         {
-            title: 'Products',
+            title: 'Event Calendar',
             url: '/Products',
             cName: 'nav-links'
-        },
-        {
-            title: 'Contact Us',
-            url: '#',
-            cName: 'nav-links'
-        }/*,
+        },/*,
         {
             title: 'Watch on Youtube',
             url: 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live',
@@ -39,7 +34,7 @@ const Navbar = () => {
     ]
     return(
         <nav className = 'NavbarItems'>
-            <h1 className ='navbar-logo'>Disclosed<img src={logo} className = 'logo' alt = '???'/></h1>
+            <div className ='navbar-logo'><img src={logo} className = 'logo' alt = '???'/><h1 className='logo-name'>Disclosed</h1></div>
             <div className = 'menu-icon' onClick={handleClick}>
                 <i className = {clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>
@@ -54,8 +49,8 @@ const Navbar = () => {
                     )
                 })}
             </ul>
-            <div style = {{width: "200px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "10px"}}>
-                <Button children = "Watch on Youtube" onClick = "https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA/live" buttonStyle = "" buttonSizes = ""/>
+            <div style = {{width: "200px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "25px"}}>
+                <Button children = "Get Started" onClick = "/Products" buttonStyle = "" buttonSizes = ""/>
             </div>
         </nav>
     );
