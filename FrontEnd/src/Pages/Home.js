@@ -9,13 +9,12 @@ function Home(){
         return r.keys().map(r);
     }
     const SpeakerLogos = arrayColumn(importAll(require.context('./SpeakerLogos/', false, /\.(png|jpe?g|svg)$/)), 'default');
-
-    /*const PartnerLogos = importAll(require.context('./PartnerLogos/', false, /\.(png|jpe?g|svg)$/));*/
+    const PartnerLogos = arrayColumn(importAll(require.context('./PartnerLogos/', false, /\.(png|jpe?g|svg)$/)), 'default');
 
     return(
         <div>
             <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' staticImage={false} backgroundColor='black'/>
-            <DisplayLogos images = {SpeakerLogos} text= 'Our Partners are ...' staticImage={true}/>
+            <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' staticImage={true}/>
             <ContactUs />
             <div style = {{display: 'flex', justifyContent: 'center'}}>
                 <WordCloud />
