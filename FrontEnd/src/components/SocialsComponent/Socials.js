@@ -29,15 +29,12 @@ function SocialsFooter() {
         <FontAwesomeIcon icon={faLinkedin} size="3x" />
       </a>
       <br></br>
-      <br></br>
 
-      <h7>609.250.2767</h7>
-      <br></br>
-      <h7>disclosed.advice@gmail.com</h7>
-      <br></br>
+      <p>609.250.2767</p>
+      <p>disclosed.advice@gmail.com</p>
       <br></br>
       <h5>© 2021 Disclosed. All rights reserved.</h5>
     </div>
   );
 }
-export default SocialsFooter; 
+export default SocialsFooter;
