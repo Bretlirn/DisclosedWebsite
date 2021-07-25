@@ -2,6 +2,7 @@ import React from 'react';
 import DisplayLogos from '../components/DisplayLogosComponent/DisplayLogos';
 import WordCloud from "../components/WordcloudComponent/WordCloud";
 import ContactUs from '../components/ContactUsComponent/ContactUs'
+import SocialsFooter from '../components/SocialsComponent/Socials';
 function Home(){
     //This part required for DisplayLogos
     const arrayColumn = (arr, n) => arr.map((x) => x[n]);
@@ -15,10 +16,7 @@ function Home(){
         <div>
             <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' staticImage={false} backgroundColor='black'/>
             <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' staticImage={true}/>
-            <ContactUs />
-            <div style = {{display: 'flex', justifyContent: 'center'}}>
-                <WordCloud />
-            </div>
+            <SocialsFooter/>
         </div>
     );
 }
