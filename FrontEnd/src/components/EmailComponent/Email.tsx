@@ -81,7 +81,7 @@ const Email = () => {
   };
 
   return (
-    <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+    <form id="contact-form" onSubmit={handleSubmit(onSubmit)} style = {{width: "100%"}}>
       <input type="hidden" name="id" value={contactNumber} />
 
       <input

@@ -12,18 +12,21 @@ const SIZES = [
 ]
 
 export const Button = ({
-    width,
-    height,
     children,
-    type,
     onClick,
     buttonStyle,
-    buttonSizes,
-}) => {
+    buttonSizes}:{
+        children:string;
+        onClick:string;
+        buttonStyle:any;
+        buttonSizes:any;
+    }
+) => {
     const checkButtonStyle = STYLE.includes(buttonStyle) ? buttonStyle : STYLE[0]
     const checkButtonSizes = SIZES.includes(buttonSizes) ? buttonSizes : SIZES[0]
     return(
-        <a className = {`btn ${checkButtonStyle} ${checkButtonSizes}`} style = {{width: '325px'}} href = {onClick}>
+
+        <a className = {`btn ${checkButtonStyle} ${checkButtonSizes}`} style={{width: "150px"}} href = {onClick}>
             {children}
         </a>
     )

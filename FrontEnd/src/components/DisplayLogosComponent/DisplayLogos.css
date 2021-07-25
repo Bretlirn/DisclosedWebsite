@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .speaker-container{
-    background: #444444;
-    /*  background-image: url("EasyImage.jpg"); */
+    /*background: var(--bgColor);*/
     height: 600px;
     display:flex;
     flex-wrap: wrap;
@@ -10,6 +10,7 @@
 .speaker-header{
     color: #ffffff;
     width: 100%;
+    font-family: 'Roboto';
     font-size: 30px;
     text-align: center;
     white-space: pre-wrap;

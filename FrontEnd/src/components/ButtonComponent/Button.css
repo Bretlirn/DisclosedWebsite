@@ -1,20 +1,19 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+a.btn{
     --primary: rgb(136,0,21);
-
-}
-
-.btn{
     text-decoration: none;
     text-align: center;
     padding: 8px 20px;
     border-radius: 4px;
+    font-family: 'Roboto';
     outline: none;
     border: none;
     cursor: pointer;
     color: #ffffff;
 }
 
-.btn:hover{
+a.btn:hover{
     padding: 8px 20px;
     transition: all 0.3s ease-out;
     background: #ffffff;
@@ -22,11 +21,11 @@
     transition: 250ms;
 }
 
-.btn--primary{
+a.btn--primary{
     background-color: var(--primary);
 }
 
-.btn-outline{
+a.btn-outline{
     background-color: transparent;
     color: #ffffff;
     padding: 8px 20px;
@@ -35,14 +34,14 @@
     transition: all 0.3s ease-out;
 }
 
-.btn-medium{
+a.btn-medium{
     padding: 8px 20px;
     border-radius: 4px;
     font-size: 18px;
     color: #ffffff;
 }
 
-.btn-large{
+a.btn-large{
     padding: 12px 28px;
     border-radius: 4px;
     font-size: 20px;
