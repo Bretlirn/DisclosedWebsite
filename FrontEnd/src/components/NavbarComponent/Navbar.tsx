@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import './Navbar.css';
-import { Button } from '../ButtonComponent/Button';
-import logo from './logo.png';
+import { Button } from '../util/ButtonComponent/Button';
+import logo from '../../assets/logos/logo.png';
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false)
@@ -34,7 +34,11 @@ const Navbar = () => {
     ]
     return(
         <nav className = 'NavbarItems'>
-            <div className ='navbar-logo'><img src={logo} className = 'logo' alt = '???'/><h1 className='logo-name'>Disclosed</h1></div>
+            <div className ='navbar-logo'><img src={logo} className = 'logo' alt = '???'/>
+                <div className = 'logo-name-center'>
+                    <h1 className='logo-name'>Disclosed</h1>
+                </div>
+            </div>
             <div className = 'menu-icon' onClick={handleClick}>
                 <i className = {clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>
