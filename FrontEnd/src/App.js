@@ -26,7 +26,7 @@ function App() {
             </div>
           </div>
           <div style = {{color:'#000000', fontFamily:'sans-serif', fontWeight:'bold', fontSize:'24px', padding:'12px'}}>
-            Mobile page in development ...
+            Mobile view in construction...
           </div>
         </div>
       </div>
