@@ -23,7 +23,7 @@
 
 .slideshow-container{
     position:relative;
-    height: 600px;
+    height: 500px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;

@@ -5,6 +5,7 @@ import Navbar from "./components/NavbarComponent/Navbar";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Reports from "./Pages/Reports";
+import SocialsFooter from "./components/SocialsComponent/Socials";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Home />
             </Route>
           </Switch>
+          <SocialsFooter/>
         </Router>
       </div>
     </>
