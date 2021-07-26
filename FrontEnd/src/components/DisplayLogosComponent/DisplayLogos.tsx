@@ -49,7 +49,7 @@ const DisplayLogos = ({images, text, staticImage, backgroundColor, numImages}:{
         updateData = !updateData;
         return(
             <div className = "speaker-container" style= {{background: bgColor}}>
-                <h1 className = "speaker-header"><strong>{text}</strong></h1>
+                <h1 className = "speaker-header"><strong><div style = {{display: 'flex', height: '100%', justifyContent:'center', alignItems:'center'}}>{text}</div></strong></h1>
             </div>
         );
     }
