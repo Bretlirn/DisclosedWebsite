@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import React, { useState, useEffect } from 'react';
 import FadeImage from '../util/FadeImageComponent/FadeImage';
 import './DisplayLogos.css';
@@ -18,7 +16,6 @@ const DisplayLogos = ({images, text, staticImage, backgroundColor, numImages}:{
     const bgColor = (typeof(backgroundColor) == 'string' ? backgroundColor: "#888888");
     //states
     const [data, setData] = useState(['']);
-
     //functions
     const arrayColumn = (arr:any, n:any) => arr.map((x:any) => x[n]);
     //variables
@@ -49,7 +46,7 @@ const DisplayLogos = ({images, text, staticImage, backgroundColor, numImages}:{
         updateData = !updateData;
         return(
             <div className = "speaker-container" style= {{background: bgColor}}>
-                <h1 className = "speaker-header"><strong><div style = {{display: 'flex', height: '100%', justifyContent:'center', alignItems:'center'}}>{text}</div></strong></h1>
+                <h1 className = "speaker-header"><strong>{text}</strong></h1>
             </div>
         );
     }
