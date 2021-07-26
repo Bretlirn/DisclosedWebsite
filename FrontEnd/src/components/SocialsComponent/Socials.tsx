@@ -1,13 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faYoutube,
-  faInstagram,
-  faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import './Socials.css'
 
-function SocialsFooter() {
+const SocialsFooter = () => {
   return (
     <div className = "main-footer">
         <div className = "row">
