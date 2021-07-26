@@ -1,7 +1,6 @@
 import React from 'react';
 import DisplayLogos from '../components/DisplayLogosComponent/DisplayLogos';
 import Landing from '../components/LandingComponent/Landing'
-
 function Home(){
     //This part required for DisplayLogos
     const arrayColumn = (arr, n) => arr.map((x) => x[n]);
