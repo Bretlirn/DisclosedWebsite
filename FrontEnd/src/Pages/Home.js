@@ -18,6 +18,7 @@ function Home(){
             <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' staticImage={false} backgroundColor='black'/>
             <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' staticImage={true}/>
         </div>
+        
     );
 }
 

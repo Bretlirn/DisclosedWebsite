@@ -4,16 +4,34 @@
   }
   
   /* SOCIAL STUFF */
-  .social-container {
+
+  .row {
+    display: flex;
     background: #eee;
     padding: 10px 50px;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
   }
+
   a.social {
     margin: 15px;
     transition: transform 250ms;
-    display: inline-block;
+    display: inline-block
+  }
+
+  .social-container {
+    padding: 0px
+  }
+
+  .contact {
+    padding-top: 23px
   }
   
+  .copyright {
+    padding-top: 33px;
+  } 
+
   a.social:hover {
     transform: translateY(-2px);
   }
