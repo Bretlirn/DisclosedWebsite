@@ -2,6 +2,7 @@ import React from 'react';
 import DisplayLogos from '../components/DisplayLogosComponent/DisplayLogos';
 import WordCloud from "../components/WordcloudComponent/WordCloud";
 import ContactUs from '../components/ContactUsComponent/ContactUs';
+import Landing from '../components/LandingComponent/Landing'
 function Home(){
     //This part required for DisplayLogos
     const arrayColumn = (arr, n) => arr.map((x) => x[n]);
@@ -13,6 +14,7 @@ function Home(){
 
     return(
         <div>
+            <Landing />
             <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' staticImage={false} backgroundColor='black' numImages={8}/>
             <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' staticImage={true}/>
             <ContactUs />

@@ -1,0 +1,10 @@
+.landing-component{
+    background-image: url('../../assets/Comp1.gif');
+    background-size: cover;
+    background-position: 20%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}

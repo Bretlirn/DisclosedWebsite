@@ -64,10 +64,10 @@ const Fade = ({data, numImages}:{
         }
     }, [intermission, setIntermission]);
 
-    const memoizedValue = useMemo(() => (Array.from(Array(numImages).keys())), [numImages]);
+    const nImages = useMemo(() => (Array.from(Array(numImages).keys())), [numImages]);
     return(
         <div>
-            {memoizedValue.map((index) => cssTransitionFunction(index))}
+            {nImages.map((index) => cssTransitionFunction(index))}
         </div>
 
     );
