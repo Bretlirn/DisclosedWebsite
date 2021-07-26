@@ -1,11 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import './FadeImage.css'
 
-const Fade = ({data, numImages}:{
+const FadeImage = ({data, numImages}:{
     data:Array<string>;
     numImages:number;   
 }
 ) => {
+    //props validation/defaults
+    const nImages = (typeof(numImages) == 'number' && numImages > data.length ? data.length : numImages);
 
     //states
     const [current_image, imageSwitch] = useState(0);
@@ -23,9 +28,9 @@ const Fade = ({data, numImages}:{
                     in={animationState}
                     timeout={500}
                     unmountOnExit
-                    classNames = 'img'
+                    classNames = 'fade-img'
                     >
-                        <img src = {data[(current_image + n) % data.length]} className = "img-logo" alt = "opps"/>
+                        <img src = {data[(current_image + n) % data.length]} className = "fade-img-logo" alt = "opps"/>
                 </CSSTransition> 
             );
         }
@@ -64,13 +69,13 @@ const Fade = ({data, numImages}:{
         }
     }, [intermission, setIntermission]);
 
-    const nImages = useMemo(() => (Array.from(Array(numImages).keys())), [numImages]);
+    const numImageMemo = useMemo(() => (Array.from(Array(nImages).keys())), [nImages]);
     return(
         <div>
-            {nImages.map((index) => cssTransitionFunction(index))}
+            {numImageMemo.map((index) => cssTransitionFunction(index))}
         </div>
 
     );
 }
 
-export default Fade
+export default FadeImage
