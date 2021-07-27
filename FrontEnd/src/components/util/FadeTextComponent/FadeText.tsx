@@ -6,11 +6,11 @@ import { CSSTransition } from 'react-transition-group';
 const Fade = ({data, numImages, fontSize, fontFamily, color, bold, italicized}:{
     data:Array<string>;
     numImages:number;
-    fontSize:string;
-    fontFamily:string;
-    color:string;
-    bold:boolean;
-    italicized:boolean;
+    fontSize:string | null;
+    fontFamily:string | null;
+    color:string | null;
+    bold:boolean | null;
+    italicized:boolean | null;
 }
 ) => {
     //props validation/defaults
