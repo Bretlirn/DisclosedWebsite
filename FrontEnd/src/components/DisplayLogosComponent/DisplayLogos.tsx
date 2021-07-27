@@ -4,13 +4,16 @@ import './DisplayLogos.css';
 
 
 
-const DisplayLogos = ({images, text, staticImage, backgroundColor, numImages}:{
+const DisplayLogos = ({images, text, textColor, staticImage, backgroundColor, numImages}:{
         images:Array<string>;
         text:string;
+        textColor:string | null;
         staticImage:boolean;
         backgroundColor:string;
         numImages: number;
     }) => {
+
+    const tColor = (typeof(textColor) == 'string' ? textColor : '#000000');
     const nImages = (typeof(numImages) == 'number' ? numImages : 1);
     const staticImg = (typeof(staticImage) == 'boolean' ? staticImage : false);
     const bgColor = (typeof(backgroundColor) == 'string' ? backgroundColor: "#888888");
@@ -46,13 +49,13 @@ const DisplayLogos = ({images, text, staticImage, backgroundColor, numImages}:{
         updateData = !updateData;
         return(
             <div className = "speaker-container" style= {{background: bgColor}}>
-                <h1 className = "speaker-header"><strong>{text}</strong></h1>
+                <h1 className = "speaker-header" style = {{color:tColor}}><strong>{text}</strong></h1>
             </div>
         );
     }
     return(   
         <div className = "speaker-container" style= {{background: bgColor}}>
-            <h1 className = "speaker-header"><strong>{text}</strong></h1>
+            <h1 className = "speaker-header" style={{color:tColor}}><strong>{text}</strong></h1>
             <div className="slideshow-container">
                 {staticImg ? 
                     images.map((item, index) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import DisplayLogos from '../components/DisplayLogosComponent/DisplayLogos';
 import Landing from '../components/LandingComponent/Landing'
+import HomepageActionable from '../components/HomepageActionableComponent/HomepageActionable';
 
 function Home(){
     //This part required for DisplayLogos
@@ -14,8 +15,9 @@ function Home(){
     return(
         <div>
             <Landing />
-            <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' staticImage={false} backgroundColor='black' numImages={8}/>
-            <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' staticImage={true}/>
+            <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' textColor = "black" staticImage={false} backgroundColor='white' numImages={8}/>
+            <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' textColor="black" staticImage={true} backgroundColor = 'white'/>
+            <HomepageActionable />
         </div>
         
     );

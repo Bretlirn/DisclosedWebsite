@@ -4,7 +4,7 @@ const Landing = () => {
     const FadeTexts = ['landing an interview.', 'finding a job.', 'getting hired.'];
     return(
         <div className = 'landing-component' >
-            <div style = {{opacity: 0, height:'80%'}}>
+            <div style = {{opacity: 0, flexGrow: 10}}>
                 .
             </div>
             <div className = 'landing-text-container'>
