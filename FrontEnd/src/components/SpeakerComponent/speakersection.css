@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .row2 {
     display: flex;
     padding: 75px 50px;
-    background-color: black;
+    background-color: #EDEDED;
     position: relative;
     width: 100%;
     justify-content: space-around;
   }
   
+.font {
+  font-family: 'Alice';
+  padding-top: 15px;
+  font-size: 20px;
+}
 
+.personfont {
+  font-family: 'Bebas Neue';
+  font-size: 25px;
+  padding-top: 15px;
+}
   .person1 {
     width: 200;
     height: 200;
@@ -17,8 +29,7 @@
     overflow: "hidden";
     border-width: 3;
     border-color: red;
-    font-family: "Roboto";
-    color: white;
+    color: black;
   }
 
 
@@ -29,8 +40,7 @@
     overflow: "hidden";
     border-width: 3;
     border-color: red;
-    font-family: "Roboto";
-    color: white;
+    color: black;
   }
 
   .person3 {
@@ -40,6 +50,5 @@
     overflow: "hidden";
     border-width: 3;
     border-color: red;
-    font-family: "Roboto";
-    color: white;
+    color: black;
   }
