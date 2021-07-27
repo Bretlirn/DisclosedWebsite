@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.row2 {
+    display: flex;
+    padding: 75px 50px;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+
+  .person1 {
+    width: 200;
+    height: 200;
+    border-radius: 100;
+    overflow: "hidden";
+    border-width: 3;
+    border-color: red;
+    font-family: "Roboto";
+    color: white;
+  }
+
+
+  .person2 {
+    width: 200;
+    height: 200;
+    border-radius: 100;
+    overflow: "hidden";
+    border-width: 3;
+    border-color: red;
+    font-family: "Roboto";
+    color: white;
+  }
+
+  .person3 {
+    width: 200;
+    height: 200;
+    border-radius: 100;
+    overflow: "hidden";
+    border-width: 3;
+    border-color: red;
+    font-family: "Roboto";
+    color: white;
+  }
