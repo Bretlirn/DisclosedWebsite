@@ -1,18 +1,18 @@
 .landing-component{
     background-image: url('../../assets/Landing.gif');
     background-size: cover;
-    background-position: 40%;
-    height: 600px;
+    background-position: 50%;
+    height:600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
 }
 
-
 .landing-text-container{
     display:flex;
     justify-content: center;
     align-content: center;
     height: auto;
+    flex-grow: 1;
 }

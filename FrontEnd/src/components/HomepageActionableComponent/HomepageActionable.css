@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.homepage-actionable-container{
+    height:400px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow:1;
+}
+
+.homepage-actionable-widgets{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hab-container{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background-color:#c4c4c4;
+}
+
+.homepage-actionable-title{
+    font-weight: 'bold';
+    font-size: 24px;
+    padding-top: 10px;
+    font-family: 'Roboto';
+}
+
+.hab-description{
+    font-size: 12px; 
+    height:120px;
+    font-family: 'Roboto';
+}
+
+.homepage-actionable-button{
+    background-color: #486FA4;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border-color: #486FA4;
+    border-style: solid;
+    font-family: 'Roboto';
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.homepage-actionable-button:hover{
+    padding: 8px 20px;
+    border-radius: 25px;
+    border-color: #486FA4;
+    border-style: solid;
+    transition: all 0.3s ease-out;
+    background: #ffffff;
+    color: #486FA4;
+    transition: 250ms;
+}
