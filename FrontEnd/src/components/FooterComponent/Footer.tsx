@@ -31,8 +31,8 @@ const Footer = () => {
             <p>© 2021 Disclosed. All rights reserved.</p>
           </div>
           <div className = "contact">
-            <h4>609.250.2767 </h4>
-            <h4>disclosed.advice@gmail.com</h4>
+            <p>609.250.2767 </p>
+            <p>disclosed.advice@gmail.com</p>
           </div>
         </div>
     </div>

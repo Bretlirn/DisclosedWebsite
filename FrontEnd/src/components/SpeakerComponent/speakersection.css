@@ -18,37 +18,16 @@
 }
 
 .personfont {
-  font-family: 'Bebas Neue';
-  font-size: 25px;
+  font-family: 'Alice';
+  font-size: 20px;
   padding-top: 15px;
 }
-  .person1 {
-    width: 200;
-    height: 200;
-    border-radius: 100;
-    overflow: "hidden";
-    border-width: 3;
-    border-color: red;
-    color: black;
-  }
-
-
-  .person2 {
-    width: 200;
-    height: 200;
-    border-radius: 100;
-    overflow: "hidden";
-    border-width: 3;
-    border-color: red;
-    color: black;
-  }
-
-  .person3 {
-    width: 200;
-    height: 200;
-    border-radius: 100;
-    overflow: "hidden";
-    border-width: 3;
-    border-color: red;
-    color: black;
-  }
+.person {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  overflow: "hidden";
+  border-width: 3px;
+  border-color: red;
+  color: black;
+}
