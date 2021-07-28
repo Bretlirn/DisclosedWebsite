@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import './Socials.css'
+import './Footer.css'
 
-const SocialsFooter = () => {
+const Footer = () => {
   return (
     <div className = "main-footer">
         <div className = "row">
@@ -31,11 +31,11 @@ const SocialsFooter = () => {
             <p>© 2021 Disclosed. All rights reserved.</p>
           </div>
           <div className = "contact">
-            <h4>609.250.2767 </h4>
-            <h4>disclosed.advice@gmail.com</h4>
+            <p>609.250.2767 </p>
+            <p>disclosed.advice@gmail.com</p>
           </div>
         </div>
     </div>
   );
 }
-export default SocialsFooter;
+export default Footer;

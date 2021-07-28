@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    background-color: #EDEDED;
+    padding-bottom: 25px;
+}
+.row {
+    display: flex;
+    padding: 75px 50px;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: "hidden";
+    color: black;
+  }
+
+.name {
+    font-family: 'Alice';
+    font-size: 30px;
+    padding-top: 15px;
+    font-weight: bold;
+  }
+
+.title {
+  font-family: 'Alice';
+  font-size: 22px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+  
+.quote {
+  font-family: 'Alice';
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+

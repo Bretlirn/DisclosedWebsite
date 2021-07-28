@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url('https://use.typekit.net/bok8vky.css');
 
 .App {
     /* font-family: Impact; */
@@ -28,12 +30,12 @@
 
   .contact {
     padding-top: 23px;
-    font-family: 'Roboto';
+    font-family: "Alice";
   }
   
   .copyright {
     padding-top: 33px;
-    font-family: 'Times New Roman'
+    font-family: 'Alice'
   } 
 
   a.social:hover {
@@ -41,7 +43,8 @@
   }
   
   a.youtube {
-    color: #eb3223;
+    /* color: #eb3223; */
+    color: black;
   }
 
   a.instagram {
@@ -49,6 +52,7 @@
   }
 
   a.linkedin {
-    color: #0077b5;
+    /* color: #0077b5; */
+    color: black;
   }
   

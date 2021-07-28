@@ -5,8 +5,8 @@ import Navbar from "./components/NavbarComponent/Navbar";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Reports from "./Pages/Reports";
-import SocialsFooter from "./components/SocialsComponent/Socials";
 import logo from './assets/logos/logo.png'
+import Footer from "./components/FooterComponent/Footer";
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
               <Home />
             </Route>
           </Switch>
-          <SocialsFooter/>
+          <Footer/>
         </Router>
       </div>
     </>

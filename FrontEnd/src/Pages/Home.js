@@ -1,7 +1,8 @@
 import React from 'react';
 import DisplayLogos from '../components/DisplayLogosComponent/DisplayLogos';
-import Landing from '../components/LandingComponent/Landing'
 import HomepageActionable from '../components/HomepageActionableComponent/HomepageActionable';
+import Landing from '../components/LandingComponent/Landing';
+import Speaker from '../components/SpeakerComponent/speakersection';
 
 function Home(){
     //This part required for DisplayLogos
@@ -17,6 +18,7 @@ function Home(){
             <Landing />
             <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' textColor = "black" staticImage={false} backgroundColor='white' numImages={8}/>
             <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' textColor="black" staticImage={true} backgroundColor = 'white'/>
+            <Speaker/>
             <HomepageActionable />
         </div>
         
