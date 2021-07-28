@@ -7,6 +7,7 @@
     height: 100%;
     padding-top: 25px;
     background-color: #EDEDED;
+    padding-bottom: 25px;
 }
 .row {
     display: flex;
@@ -24,7 +25,7 @@
     color: black;
   }
 
-  .name {
+.name {
     font-family: 'Alice';
     font-size: 30px;
     padding-top: 15px;

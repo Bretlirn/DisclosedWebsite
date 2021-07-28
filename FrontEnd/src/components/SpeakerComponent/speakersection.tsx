@@ -5,13 +5,16 @@ import walt from "../../assets/pictures/walt.jpg";
 import './speakersection.css'
 
 const Speaker = () => {
-    const QuotesBlock = ({name, title, quote}:{
+    const QuotesBlock = ({name, title, quote, image}:{
         name:string;
         title:string;
         quote:string;
+        image:string;
     }) => {
+
         return(
             <div className = 'container'>
+                    <img src = {image} alt = "Not found" className = "image"/>
                     <div className = 'name'>
                         {name}
                     </div>
@@ -26,22 +29,15 @@ const Speaker = () => {
     }
 
   return (
-    <div className = "main-container">   
+
+  <div className = "main-container">   
    <div className = "row">
-       <div>
-           <img className = "image" src = {diego} alt = "diego"/>
-           <QuotesBlock name = "Diego Granados" title = "Product Manager @ Microsoft" quote = '"I love disclosed"'/>
-       </div>
-       <div>
-           <img className = "image" src = {dominic} alt = "dominic"/>
-           <QuotesBlock name = "Dominic Antonacci" title = "Business Operations Manager @ Amazon" quote = '"Such a great company wow"'/>
-       </div>
-       <div>
-           <img className = "image" src = {walt} alt = "walt"/>
-           <QuotesBlock name = "Walt Xie" title = "Talent Acquisition @ Facebook" quote = '"Smart discussions"'/>
-       </div>
+           <QuotesBlock image = {diego} name = "Diego Granados" title = "Product Manager @ Microsoft" quote = '"I love disclosed"'/>
+           <QuotesBlock image = {dominic} name = "Dominic Antonacci" title = "Business Operations Manager @ Amazon" quote = '"Such a great company wow"'/>
+           <QuotesBlock image = {walt} name = "Walt Xie" title = "Talent Acquisition @ Facebook" quote = '"Smart discussions"'/>
    </div>
-   </div>
+  </div>
   );
+  
 }
 export default Speaker;
