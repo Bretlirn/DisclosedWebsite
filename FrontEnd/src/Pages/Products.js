@@ -1,9 +1,9 @@
 import React from 'react'
-
+import CalendarComponent from '../components/CalendarComponent/Calendar'
 function Products(){
     return(
         <div>
-        <p>This is the products.</p>
+        <CalendarComponent/>
         </div>
     );
 }
