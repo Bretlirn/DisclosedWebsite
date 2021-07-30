@@ -1,6 +1,6 @@
 import React from 'react'
 import CalendarComponent from '../components/CalendarComponent/Calendar'
-function Products(){
+function EventCalendar(){
     return(
         <div>
         <CalendarComponent/>
@@ -8,4 +8,4 @@ function Products(){
     );
 }
 
-export default Products;
+export default EventCalendar;
