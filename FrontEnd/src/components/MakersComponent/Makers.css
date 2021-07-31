@@ -9,18 +9,24 @@
     padding-bottom: 25px;
 }
 
+.container {
+  width: 100%;
+  height: 100%
+}
+
 .founder {
     display: flex;
     padding: 75px 50px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;  
   }
 
 .leads {
     display: flex;
     padding: 75px 50px;
     width: 100%;
-    justify-content: center;
+    margin:auto;
+    justify-content: space-evenly;
 }
 
 .image {
@@ -44,7 +50,7 @@
 }
 
 .makerheader {
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Roboto';
     text-align: center;
     padding-top: 5%;

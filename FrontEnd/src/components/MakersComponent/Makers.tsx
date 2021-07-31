@@ -26,11 +26,11 @@ const Makers = () => {
 
   return (
   <div className = "main-container">   
-  <div className = "makerheader">
+    <div className = "makerheader">
             <strong>
             <p>Meet the Makers</p>
             </strong>       
-          </div>
+    </div>
    <div className = "founder">
        <MakerBlock image = {michelle} name = "Michelle Chen" description = "Founder of Disclosed"/>
    </div>
