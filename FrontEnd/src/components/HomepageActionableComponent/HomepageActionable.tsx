@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Button } from '../util/ButtonComponent/Button';
+import React from 'react'
 import './HomepageActionable.css'
 const HomepageActionable = () =>{
     const HomepageActionableBlock = ({title, description, buttonName, buttonURL}:{
@@ -30,7 +29,7 @@ const HomepageActionable = () =>{
             </div>
             <div className = 'homepage-actionable-widgets'>
                 <HomepageActionableBlock title = "Live Resume Review" description = "<TODO>" buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
-                <div style = {{paddingLeft:'5%' , paddingRight: '5%'}}>
+                <div style = {{marginTop: '138px'}}>
                     <a className = 'homepage-actionable-button' href = 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA"/live'>Watch on Youtube</a>
                 </div>
                 <HomepageActionableBlock title = "Mock Interview" description = "<TODO>" buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
