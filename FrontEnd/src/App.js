@@ -3,8 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/NavbarComponent/Navbar";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
-import Reports from "./Pages/Reports";
+import EventCalendar from "./Pages/EventCalendar";
+import AboutUs from "./Pages/AboutUs";
 import logo from './assets/logos/logo.png'
 import Footer from "./components/FooterComponent/Footer";
 
@@ -39,10 +39,10 @@ function App() {
           <Navbar />
           <Switch>
             <Route path="/products">
-              <Products />
+              <EventCalendar />
             </Route>
             <Route path="/reports">
-              <Reports />
+              <AboutUs />
             </Route>
             <Route path="/">
               <Home />

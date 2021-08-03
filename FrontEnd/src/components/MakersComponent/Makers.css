@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Alice);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    background-color: #EDEDED;
+    padding-bottom: 25px;
+}
+
+.container {
+  width: 100%;
+  height: 100%
+}
+
+.founder {
+    display: flex;
+    padding: 75px 50px;
+    width: 100%;
+    justify-content: space-evenly;  
+  }
+
+.leads {
+    display: flex;
+    padding: 75px 50px;
+    width: 100%;
+    margin:auto;
+    justify-content: space-evenly;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    color: black;
+  }
+
+.name {
+    font-family: 'Alice';
+    font-size: 30px;
+    padding-top: 15px;
+    font-weight: bold;
+  }  
+
+.description {
+  font-family: 'Alice';
+  font-size: 22px;
+  padding-top: 15px;
+  font-weight: 10px;
+}
+
+.makerheader {
+    font-size: 50px;
+    font-family: 'Roboto';
+    text-align: center;
+    padding-top: 5%;
+}
