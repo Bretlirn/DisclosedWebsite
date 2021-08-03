@@ -8,7 +8,7 @@ const Landing = () => {
                 .
             </div>
             <div className = 'landing-text-container'>
-                <div style = {{fontFamily:'sans-serif', fontSize:'46px', color:'#ffffff', fontWeight:'bold', marginRight:'10px'}}>
+                <div className = 'landing-text'>
                     We're this close to 
                 </div>
                 <FadeText data={FadeTexts} numImages={1} fontSize='46px' fontFamily='sans-serif' color="#ffffff" bold={true} italicized={false}/>

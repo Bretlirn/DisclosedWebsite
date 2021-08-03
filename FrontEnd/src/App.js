@@ -38,10 +38,10 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-            <Route path="/products">
+            <Route path="/eventcalendar">
               <EventCalendar />
             </Route>
-            <Route path="/reports">
+            <Route path="/aboutus">
               <AboutUs />
             </Route>
             <Route path="/">

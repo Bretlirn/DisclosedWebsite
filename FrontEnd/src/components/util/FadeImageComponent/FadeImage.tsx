@@ -4,13 +4,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './FadeImage.css'
 
-const FadeImage = ({data, numImages}:{
+const FadeImage = ({data, numImages, imageSize}:{
     data:Array<string>;
-    numImages:number;   
+    numImages: number;   
+    imageSize: string | null;
 }
 ) => {
     //props validation/defaults
     const nImages = (typeof(numImages) == 'number' && numImages > data.length ? data.length : numImages);
+    const imgSize = (typeof(imageSize) == 'string' ? imageSize: '125px');
 
     //states
     const [current_image, imageSwitch] = useState(0);
@@ -27,10 +29,10 @@ const FadeImage = ({data, numImages}:{
                 <CSSTransition 
                     in={animationState}
                     timeout={500}
-                    unmountOnExit
+                    /*unmountOnExit*/
                     classNames = 'fade-img'
                     >
-                        <img src = {data[(current_image + n) % data.length]} className = "fade-img-logo" alt = "opps"/>
+                        <img src = {data[(current_image + n) % data.length]} className = "fade-img-logo" style = {{width: imgSize, height: imgSize}} alt = "opps"/>
                 </CSSTransition> 
             );
         }
@@ -39,10 +41,8 @@ const FadeImage = ({data, numImages}:{
     //effects
     useEffect(() => {
         if (data.length !== 0){
-            imageSwitch((current_image + numImages) % data.length);
             setAnimationState(!animationState);
             setFadeOut(!fadeOut);
-
         }
     }, [fadeIn, setFadeIn]);
 
@@ -62,7 +62,8 @@ const FadeImage = ({data, numImages}:{
         if (data.length !== 0){
             var imageTimeout = setTimeout(() => {
                 setFadeIn(!fadeIn);
-            }, 500);
+                imageSwitch((current_image + numImages) % data.length);
+            }, 480);
             return () => {
                 clearTimeout(imageTimeout);
             };
