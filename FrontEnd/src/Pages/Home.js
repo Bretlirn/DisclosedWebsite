@@ -16,8 +16,8 @@ function Home(){
     return(
         <div>
             <Landing />
-            <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' textColor = "black" staticImage={false} backgroundColor='white' numImages={8}/>
-            <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' textColor="black" staticImage={true} backgroundColor = 'white'/>
+            <DisplayLogos images = {SpeakerLogos} text= 'Our Speakers are from ...' textColor = "black" staticImage={false} backgroundColor='white' numImages={8} imageSize = "125px"/>
+            <DisplayLogos images = {PartnerLogos} text= 'Our Partners are ...' textColor="black" staticImage={true} backgroundColor = 'white' imageSize = "250px"/>
             <Speaker/>
             <HomepageActionable />
         </div>

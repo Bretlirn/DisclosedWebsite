@@ -18,12 +18,12 @@ const Navbar = () => {
         },
         {
             title: 'About Us',
-            url: '/Reports',
+            url: '/aboutus',
             cName: 'nav-links'
         },
         {
             title: 'Event Calendar',
-            url: '/Products',
+            url: '/eventcalendar',
             cName: 'nav-links'
         },/*,
         {

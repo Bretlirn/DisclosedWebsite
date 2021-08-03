@@ -4,19 +4,21 @@ import './DisplayLogos.css';
 
 
 
-const DisplayLogos = ({images, text, textColor, staticImage, backgroundColor, numImages}:{
+const DisplayLogos = ({images, text, textColor, staticImage, backgroundColor, numImages, imageSize}:{
         images:Array<string>;
         text:string;
         textColor:string | null;
         staticImage:boolean;
         backgroundColor:string;
         numImages: number;
+        imageSize: string | null;
     }) => {
 
     const tColor = (typeof(textColor) == 'string' ? textColor : '#000000');
     const nImages = (typeof(numImages) == 'number' ? numImages : 1);
     const staticImg = (typeof(staticImage) == 'boolean' ? staticImage : false);
     const bgColor = (typeof(backgroundColor) == 'string' ? backgroundColor: "#888888");
+    const imgSize = (typeof(imageSize) == 'string' ? imageSize: '125px');
     //states
     const [data, setData] = useState(['']);
     //functions
@@ -61,12 +63,12 @@ const DisplayLogos = ({images, text, textColor, staticImage, backgroundColor, nu
                     images.map((item, index) => {
                         return(
                             <li key = {index} style = {{listStyle:'none'}}>
-                                <img src = {item} className = "display-img-logo" alt = "opps"/>
+                                <img src = {item} className = "display-img-logo" style = {{width: imgSize, height: imgSize}} alt = "opps"/>
                             </li>
                         )
                     })
                     :
-                    <FadeImage data={images} numImages={nImages}/>
+                    <FadeImage data={images} numImages={nImages} imageSize={imgSize}/>
                 }
 
             </div>
