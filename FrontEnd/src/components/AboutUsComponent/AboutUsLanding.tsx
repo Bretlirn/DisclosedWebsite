@@ -53,7 +53,7 @@ const AboutUsLanding = () =>{
                     </div>
                 </div>
                 <div className = "about-us-pi-chart">
-                    <img src = {piChart} alt = "not found" width = "300px" height = "300px"/>
+                    <img src = {piChart} alt = "not found" width = "350px" height = "350px"/>
                 </div>
             </div>
             <div className = "about-us-landing-bottom-banner">
