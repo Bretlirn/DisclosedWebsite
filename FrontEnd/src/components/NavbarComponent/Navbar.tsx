@@ -54,7 +54,7 @@ const Navbar = () => {
                 })}
             </ul>
             <div style = {{width: "200px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "25px"}}>
-                <Button children = "Get Started" onClick = "/Products" buttonStyle = "" buttonSizes = ""/>
+                <Button children = "Get Started" onClick = "/getstarted" buttonStyle = "" buttonSizes = ""/>
             </div>
         </nav>
     );

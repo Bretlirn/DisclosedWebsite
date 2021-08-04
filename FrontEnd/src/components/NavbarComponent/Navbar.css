@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 .NavbarItems{
-    background: linear-gradient(0deg, black, #444444);
+    background: #222222; /*linear-gradient(0deg, black, #444444);*/
     height: 100px;
     display: flex;
     justify-content: center;
@@ -14,7 +14,6 @@
     width: 300px;
     height: 100%;
     margin-left: 30px;
-    /*margin-bottom: 35px;*/
     display: flex;
     justify-content: center;
     align-items: center;

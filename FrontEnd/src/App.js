@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/NavbarComponent/Navbar";
 import Home from "./Pages/Home";
 import EventCalendar from "./Pages/EventCalendar";
+import GetStarted from "./Pages/GetStarted";
+import Participant from "./Pages/Participants";
+import HiringManager from "./Pages/HiringManager";
 import AboutUs from "./Pages/AboutUs";
 import logo from './assets/logos/logo.png'
 import Footer from "./components/FooterComponent/Footer";
@@ -43,6 +46,15 @@ function App() {
             </Route>
             <Route path="/aboutus">
               <AboutUs />
+            </Route>
+            <Route path='/getstarted'>
+              <GetStarted />
+            </Route>
+            <Route path='/participant'>
+              <Participant />
+            </Route>
+            <Route path='/hiringmanager'>
+              <HiringManager />
             </Route>
             <Route path="/">
               <Home />

@@ -2,8 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import './Footer.css'
+import Instagram from '../../assets/icons/Instagram.png';
+import LinkedIn from '../../assets/icons/LinkedIn.png';
+import YouTube from '../../assets/icons/YouTube.png';
+
 
 const Footer = () => {
+  //Font Awesome Code <FontAwesomeIcon icon={faLinkedin} size="3x" />
   return (
     <div className = "main-footer">
         <div className = "row">
@@ -12,19 +17,19 @@ const Footer = () => {
               href="https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA"
               className="youtube social"
               >
-              <FontAwesomeIcon icon={faYoutube} size="3x" />
+              <img className = 'footer-icons' src = {YouTube} />
             </a>
             <a
               href="https://www.instagram.com/disclosedadvice"
               className="instagram social"
             >
-              <FontAwesomeIcon icon={faInstagram} size="3x" />
+              <img className = 'footer-icons' src = {Instagram} />
             </a>
             <a
               href="https://www.linkedin.com/company/disclosed-edu/"
               className="linkedin social"
               >
-              <FontAwesomeIcon icon={faLinkedin} size="3x" />
+              <img className = 'footer-icons' src = {LinkedIn} />
             </a>           
           </div>
           <div className = "copyright" >
