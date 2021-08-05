@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.get-started-participant-landing-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.get-started-participant-landing-title{
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.get-started-participant-landing-boxes-container{
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.get-started-participant-landing-boxes{
+    border-radius: 10px;
+    width: 275px;
+    height: 275px;
+    padding: 25px;
+    background-color: #C4C4C4;
+    text-align: center;
+    margin: 25px 40px;
+    font-size: 30px;
+    font-family: 'Roboto';
+
+}

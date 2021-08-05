@@ -35,6 +35,7 @@ const AboutUsLanding = () =>{
 
             <div className = "about-us-flexbox">
                 <div className = "about-us-bubble-flexbox-row">
+                        <div/>
                         <div className = "about-us-bubble">
                             <BubbleComponent text="Scale Mentorship" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
                         </div>
@@ -48,9 +49,7 @@ const AboutUsLanding = () =>{
                         <div className = "about-us-bubble">
                             <BubbleComponent text="Disrupt Hiring Process" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
                         </div>
-                </div>
-                <div className = "about-us-pi-chart">
-                    <img src = {piChart} alt = "not found" width = "350px" height = "350px"/>
+                        <div/>
                 </div>
             </div>
             <div className = "about-us-landing-bottom-banner">

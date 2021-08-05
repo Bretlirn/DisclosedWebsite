@@ -53,11 +53,19 @@ const Navbar = () => {
                     )
                 })}
             </ul>
-            <div style = {{width: "200px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "25px"}}>
-                <Button children = "Get Started" onClick = "/getstarted" buttonStyle = "" buttonSizes = ""/>
+            <div style = {{width: "250px", display: "flex", justifyContent: "center", alignContent: "center", marginRight: "25px"}}>
+            <div className="dropdown">
+                <button className="dropbtn">Get Started</button>
+                <div className="dropdown-content">
+                    <a href="/participant">Job Seeker</a>
+                    <a href="/hiringmanager">Hiring Manager</a>
+                </div>
+                </div>
             </div>
         </nav>
     );
+    //<Button children = "Get Started" onClick = "/getstarted" buttonStyle = "" buttonSizes = ""/>
+            
 }
 
 export default Navbar

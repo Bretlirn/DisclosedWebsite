@@ -1,10 +1,8 @@
 import React from 'react'
+import GetStartedLanding from '../components/GetStartedLandingComponent/GetStartedLanding';
 function GetStarted(){
     return(
-        <div>
-            <a href = "/participant">participant</a>
-            <a href = '/hiringmanager'>hiring manager</a> 
-        </div>
+        <GetStartedLanding />
     );
 }
 
