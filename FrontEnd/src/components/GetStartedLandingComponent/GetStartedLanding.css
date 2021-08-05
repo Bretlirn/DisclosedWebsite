@@ -1,0 +1,25 @@
+.get-started-landing-component{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+a.get-started-landing-button{
+    height:min-content;
+    padding: 8px 20px;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    background: #c4c4c4;
+    border-radius: 50px;
+    margin-left:10%;
+    width: min-content;
+    white-space: nowrap;
+}
+
+a.get-started-landing-button:hover{
+    color: white;
+    background: black;
+    transition: all 0.2s ease-out;
+}

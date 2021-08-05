@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.get-started-hiring-manager-step-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.get-started-hiring-manager-right-steps{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 32px;
+    font-family: "Roboto";
+    margin: 40px 100px;
+}
+
+.get-started-hiring-manager-big-title{
+    font-size:48px;
+    margin-right: 10px;
+}
+
+.get-started-hiring-manager-small-title{
+    font-size:24px;
+    white-space: pre-wrap;
+}
+
+.get-started-hiring-manager-steps-component{
+    background-color: #e2e2e2;
+}
+
+.get-started-hiring-manager-steps-title{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-family: 'Roboto';
+    font-size: 48px;
+}
+
+.get-started-hiring-manager-step-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.get-started-hiring-manager-questions{
+    margin-bottom: 75px;
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+
+.get-started-hiring-manager-steps-item{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 75px;
+    font-size: 32px;
+    font-family: "Roboto";
+}
+
+.get-started-hiring-manager-steps-image{
+    margin-left: 15%;
+    margin-right: 5%;
+    width: 50px;
+    height: 50px;
+}
