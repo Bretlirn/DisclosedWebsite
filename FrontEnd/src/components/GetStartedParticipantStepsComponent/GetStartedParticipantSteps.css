@@ -72,8 +72,9 @@
 }
 
 .get-started-participant-steps-disclaimer{
+    margin-left: 10%;
     width: min-content;
     white-space: nowrap;
     font-family: 'Roboto';
-    font-size: 12px;
+    font-size: 16px;
 }

@@ -66,3 +66,96 @@
     color: #486FA4;
     transition: 250ms;
 }
+
+.homepage-actionable-youtube{
+    position: relative;
+    cursor: pointer;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-icon{
+    visibility:hidden ;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-button{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-outline{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-hide-box{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube-button{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+    top:-60px;
+    left:-60px;
+    height: 120px;
+    width: 120px;
+    opacity: 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto';
+    outline: none;
+    cursor: pointer;
+    color: red;
+    transition: all 0.3s ease-in;
+    z-index: 3;
+}
+
+.homepage-actionable-youtube-icon{
+    position: absolute;
+    visibility:visible;
+    top:-75px;
+    left: -75px;
+    color: red;
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.homepage-actionable-youtube-outline{
+    position: absolute;
+    visibility: hidden;
+    top: -80px;
+    left: -80px;
+    color: red;
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.homepage-actionable-youtube-hide-box{
+    position: absolute;
+    visibility: hidden;
+    top:-30px;
+    left: -30px;
+    background-color: white;
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 2;
+}
