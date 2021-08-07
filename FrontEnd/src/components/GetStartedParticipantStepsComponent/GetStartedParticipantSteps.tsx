@@ -51,6 +51,7 @@ const GetStartedParticipantSteps = () => {
                 <a className = 'get-started-participant-steps-button' href = 'mailto:disclosed.advice@gmail.com'>Step 3</a>
                 Submit your Resume*
                 <AiFillMail className = 'get-started-participant-steps-icons'/>
+                
             </div>
             <div className = 'get-started-participant-steps-item'>
                 <a className = 'get-started-participant-steps-button' href = 'mailto:disclosed.advice@gmail.com'>Step 4</a>

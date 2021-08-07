@@ -1,7 +1,7 @@
 import React from 'react';
 import './GetStartedHiringManagerSteps.css';
 import fiona from '../../assets/pictures/fiona.jpg';
-import { FaPhoneAlt, FaYoutube,  } from "react-icons/fa";
+import { FaPhoneAlt, FaYoutube  } from "react-icons/fa";
 import { IoChatbubblesOutline } from "react-icons/io5";
 
 const GetStartedHiringManagerSteps = () => {
