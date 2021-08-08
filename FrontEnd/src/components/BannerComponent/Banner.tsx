@@ -1,21 +1,26 @@
 import React from 'react';
-import './EventCalendarBanner.css';
+import './Banner.css';
 
-const EventCalendarBanner = () => {
+
+const Banner = ({image, top, bottom}:{
+        image: string;
+        top: string;
+        bottom: string;
+    }) => {
     return(
         <div className = "calendar-banner-container" style = {{height: '40vh'}}>
-            <div className = "calender-banner-background" />
+            <div className = "calender-banner-background" style = {{backgroundImage: `url(${image})`}}/>
             <div className="animated-title">
                 <div className="text-top">
                     <div>
-                        <span>Event</span>
+                        <span>{top}</span>
                     </div>
                 </div>
                 <div className="text-bottom">
-                    <div>Calendar</div>
+                    <div>{bottom}</div>
                 </div>
             </div>
         </div>
     );
 };
-export default EventCalendarBanner;
+export default Banner;
