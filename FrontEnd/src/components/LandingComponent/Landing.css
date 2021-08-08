@@ -2,7 +2,7 @@
     background-image: url('../../assets/Landing.gif');
     background-size: cover;
     background-position: 50%;
-    height:600px;
+    height:90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

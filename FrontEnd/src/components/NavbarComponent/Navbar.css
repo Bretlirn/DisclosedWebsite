@@ -3,7 +3,7 @@
 
 .NavbarItems{
     background: #222222; /*linear-gradient(0deg, black, #444444);*/
-    height: 100px;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;

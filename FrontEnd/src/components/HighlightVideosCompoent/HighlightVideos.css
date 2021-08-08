@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.highlight-videos-component{
+    padding-top: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.highlight-videos-title{
+    font-family: 'Roboto';
+    font-size: 48px;
+    font-weight: bold;
+}
+.highlight-videos-flexbox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.highlight-videos-flexbox-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.highlight-video-left{
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;   
+    position: relative;
+}
+
+.ighlight-videos-flexbox-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.highlight-video-right{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;   
+    position: relative;
+}
+.highlight-video-picture{
+    
+}
+
+.highlight-video-text-left{
+    position: absolute;
+    left: 500px;
+    z-index: 1;
+    font-family: 'Roboto';
+    font-size: 36px;
+    white-space: nowrap;
+}
+
+.highlight-video-text-right{
+    position: absolute;
+    right: 500px;
+    z-index: 1;
+    font-family: 'Roboto';
+    font-size: 36px;
+    white-space: nowrap;
+}
