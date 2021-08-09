@@ -1,16 +1,25 @@
-import React from 'react'
-import './GetStartedLanding.css'
-const GetStartedLanding = () =>{
+import React, { useMemo } from 'react';
+import './GetStartedLanding.css';
+
+const GetStartedLanding = ({titles}:{
+    titles: Array<string>
+}) => {
+    const GetStartedLandingBoxes = (title: string) => {
+        return(
+            <div className = 'get-started-landing-boxes'>{title}</div>
+        );
+    }
+
+    const numTitlesMemo = useMemo(() => (Array.from(Array(titles.length).keys())), [titles]);
     return(
-        <div className = "get-started-landing-component">
-            <div style= {{height:'100px'}} />
-            <a className = "get-started-landing-button" href = "/participant">I'm a <strong>Job Seeker</strong></a>
-            <div style= {{height:'100px'}} />
-            <a className = "get-started-landing-button" href = '/hiringmanager'>I'm a <strong>Hiring Manager</strong></a>
-            <div style= {{height:'100px'}} />
+        <div className = 'get-started-landing-container'>
+            <div className = 'get-started-landing-title'>
+                Are you ready to...
+            </div>
+            <div className = 'get-started-landing-boxes-container'>
+                {titles.map((index) => GetStartedLandingBoxes(index))}
+            </div>
         </div>
     );
-
 }
-
 export default GetStartedLanding;
