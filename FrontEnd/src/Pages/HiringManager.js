@@ -1,11 +1,11 @@
 import React from 'react'
-import GetStartedHiringManagerLanding from '../components/GetStartedHiringManagerLandingComponent/GetStartedHiringManagerLanding';
 import GetStartedHiringManagerSteps from '../components/GetStartedHiringManagerStepsComponent/GetStartedHiringManagerSteps';
-//import No2 from '../components/No2/No2';
+import GetStartedLanding from '../components/GetStartedLandingComponent/GetStartedLanding';
 function HiringManager(){
+    const titleArray = ["Gain exclusive access to Disclosed speaker events", "Pay your advice forward", "Connect with other mentors"]
     return(
         <div>
-            <GetStartedHiringManagerLanding />
+            <GetStartedLanding titles = {titleArray} />
             <GetStartedHiringManagerSteps />
         </div>
     );
