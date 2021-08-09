@@ -16,7 +16,7 @@
 
 .founder {
     display: flex;
-    padding: 75px 50px;
+    padding-top: 50px;
     width: 100%;
     justify-content: space-evenly;  
   }
