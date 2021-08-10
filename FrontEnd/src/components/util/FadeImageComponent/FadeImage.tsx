@@ -72,7 +72,7 @@ const FadeImage = ({data, numImages, imageSize}:{
 
     const numImageMemo = useMemo(() => (Array.from(Array(nImages).keys())), [nImages]);
     return(
-        <div>
+        <div style = {{display: 'flex', justifyContent: 'space-evenly', alignItems:'center'}}>
             {numImageMemo.map((index) => cssTransitionFunction(index))}
         </div>
 

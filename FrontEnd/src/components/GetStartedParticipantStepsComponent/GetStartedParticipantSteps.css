@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.get-started-participant-step-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.get-started-participant-steps-item-container{
+    margin-bottom: 50px;
+}
+
+.get-started-participant-steps-item{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-family: "Roboto";
+}
+
+.get-started-participant-steps-image{
+    margin-left: 2%;
+}
+
+.get-started-participant-steps-button{
+    margin-left: 10%;
+    margin-right: 5%;
+    text-decoration: none;
+    background-color: #A4DEFF;
+    color: #000000;
+    padding: 12px 24px;
+    margin-bottom: 5px;
+    width: 175px;
+    height: min-content;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-size: 32px;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.get-started-participant-steps-button:hover{
+    background-color: #A4DEBB;
+}
+
+.get-started-participant-steps-icons{
+    margin-left: 12px;
+    width: 50px;
+    height: 50px;
+}
+
+.get-started-participant-ec-button{
+    margin-left: 12px;
+    text-decoration: none;
+    background-color: #777777;
+    color: #000000;
+    padding: 8px 20px;
+    margin-bottom: 5px;
+    width: min-content;
+    height: min-content;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-size: 12px;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.get-started-participant-ec-button:hover{
+    background-color: #aaaaaa;
+}
+
+.get-started-participant-steps-disclaimer{
+    margin-left: 10%;
+    width: min-content;
+    white-space: nowrap;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
