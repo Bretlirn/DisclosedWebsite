@@ -1,14 +1,16 @@
 import React from 'react';
 import './EventsList.css';
 
-const EventsList = ({titles, images, descriptions, buttonURLs, times}:{
+const EventsList = ({names, titles, companies, images, descriptions, buttonURLs, times}:{
+    names: Array<string>;
     titles: Array<string>;
+    companies: Array<string>;
     images: Array<string>;
     descriptions: Array<string>;
     buttonURLs: Array<string>;
     times: Array<Date>;
 }) => {
-    const EventsListBoxes = (title: string, image: string, description: string, buttonURL: string, time: Date) => {
+    const EventsListBoxes = (name: string, title: string, company:string, image: string, description: string, buttonURL: string, time: Date) => {
         const month = ['January', 
                         'Feburary', 
                         'March',
@@ -35,8 +37,9 @@ const EventsList = ({titles, images, descriptions, buttonURLs, times}:{
             return(
                 <a href = {buttonURL} className = 'el-boxes'>
                     <img className = 'el-box-image' src = {image} />
-                    <div className = 'el-box-title'>
-                        {title}
+                    <div className = 'el-box-name'>
+                        {name}
+                        <div className = 'el-box-title'>{title}<br/>@ {company}</div>
                     </div>
                     <div className = 'el-box-description'>
                         {description}
@@ -55,7 +58,7 @@ const EventsList = ({titles, images, descriptions, buttonURLs, times}:{
                         PST
                     </div>
                     <hr />
-                    <div className = 'el-box-button' >Tickets Here</div>
+                    <div className = 'el-box-button' >RSVP here</div>
                 </a>
             );
         }
@@ -67,7 +70,7 @@ const EventsList = ({titles, images, descriptions, buttonURLs, times}:{
                 Upcoming Events
             </div>
             <div className = 'el-boxes-container'>
-                {titles.map((value, index) => EventsListBoxes(titles[index], images[index], descriptions[index], buttonURLs[index], times[index]))}
+                {titles.map((value, index) => EventsListBoxes(names[index], titles[index], companies[index], images[index], descriptions[index], buttonURLs[index], times[index]))}
             </div>
         </div>
     );
