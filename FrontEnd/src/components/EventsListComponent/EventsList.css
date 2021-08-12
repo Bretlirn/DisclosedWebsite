@@ -1,0 +1,111 @@
+@import '../util/imports.css';
+
+.el-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+
+.el-title{
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.el-boxes-full-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-boxes-container {
+    --gutter: 2.5rem;
+    width: 100%;
+    max-width: 1375px;
+    display: flex;
+    background-color: #e0e0e0;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    pointer-events: none;
+}
+
+.el-boxes {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 40px;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+    width: 325px;
+    height: 400px;
+    background-color: white;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 300ms opacity, 300ms transform;
+}
+
+.el-box-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.el-box-title{
+    flex-grow: 1;
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.el-box-description{
+    flex-grow: 2;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+.el-box-time{
+    flex-grow: 2;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+.el-box-button{
+    flex-grow: 1;
+    font-size:16px;
+    font-family: 'Poppins';
+}
+
+.el-boxes-container:hover > * {
+    opacity: 0.4;
+}
+
+.el-boxes:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/*@media (min-width: 40em) {
+    .el-boxes-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .el-boxes {
+        padding: 1rem 1rem;
+    }
+}
+*/

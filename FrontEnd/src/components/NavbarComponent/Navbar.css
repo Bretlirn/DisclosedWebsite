@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
 .NavbarItems{
     background: #222222; /*linear-gradient(0deg, black, #444444);*/
@@ -101,8 +100,7 @@
 }
 
 .dropdown-content {
-
-    border-radius: 10px;
+    border-radius: 12px;
     visibility: hidden;
     position: absolute;
     border: #000 1px solid;

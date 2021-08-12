@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import '../util/imports.css';
 
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
@@ -18,8 +18,8 @@
 
 .animated-title {
   color: #222;
-  font-family: Roboto, Arial, sans-serif;
-  height: 30vh;
+  font-family: 'Poppins';
+  height: 40vh;
   left: 50%;
   position: absolute;
   top: 30%;

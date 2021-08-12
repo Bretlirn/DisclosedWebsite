@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alice);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
 .about-us-landing-component{
     width: 100%;
@@ -13,7 +12,7 @@
     margin-top: 20px;
     margin-bottom: 30px;
     flex-grow: 1;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 46px;
     font-weight: bold;
 }
@@ -79,13 +78,14 @@
     font-weight: bold;
     font-style: italic;
     background: #c4c4c4;
-    font-family: 'Alice';
+    font-family: 'Poppins';
     padding: 8px 20px;
 }
 
 .bubble-component-bubble{
     border-radius: 50%;
     text-align: center;
+    padding: 10px;
     margin: auto;
     display: flex;
     justify-content: center;

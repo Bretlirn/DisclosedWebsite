@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../imports.css';
 
 a.btn{
     --primary: rgb(136,0,21);
@@ -6,7 +6,7 @@ a.btn{
     text-align: center;
     padding: 8px 20px;
     border-radius: 4px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     outline: none;
     border: none;
     cursor: pointer;

@@ -35,21 +35,21 @@ const AboutUsLanding = () =>{
 
             <div className = "about-us-flexbox">
                 <div className = "about-us-bubble-flexbox-row">
-                        <div/>
+                    <div/>
                         <div className = "about-us-bubble">
-                            <BubbleComponent text="Scale Mentorship" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
+                            <BubbleComponent text="Scale Mentorships" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Poppins" bold = {true}/>
                         </div>
                         <div className = "about-us-bubble">
-                            <BubbleComponent text="Provide Tangible Feedback" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
+                            <BubbleComponent text="Provide Tangible Feedback" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Poppins" bold = {true}/>
                         </div>
 
                         <div className = "about-us-bubble">
-                            <BubbleComponent text="Ignite Conversation" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
+                            <BubbleComponent text="Ignite Conversations" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Poppins" bold = {true}/>
                         </div>
                         <div className = "about-us-bubble">
-                            <BubbleComponent text="Disrupt Hiring Process" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Alice" bold = {true}/>
+                            <BubbleComponent text="Disrupt Hiring Processes" size="150px" backgroundColor="#c4c4c4" textColor="#000000" textSize = "18px" textFamily = "Poppins" bold = {true}/>
                         </div>
-                        <div/>
+                    <div/>
                 </div>
             </div>
             <div className = "about-us-landing-bottom-banner">
