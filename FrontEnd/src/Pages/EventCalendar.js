@@ -86,8 +86,8 @@ function EventCalendar(){
     return(
         <div>
             <Banner image = {calendar} top = 'Event' bottom = 'Calendar'/>
-            <HighlightVideos />
             <EventsList names = {names} titles = {titles} companies = {companies} descriptions = {descriptions} times = {dates} images = {images} buttonURLs = {buttonURLs} />
+            <HighlightVideos />
         </div>
     );
 }

@@ -23,7 +23,7 @@ const HomepageActionable = () =>{
     }) => {
         return(
             <div className = 'hab-container'>
-                    <div className = 'homepage-actionable-title'>
+                    <div className = 'homepage-actionable-button-title'>
                         {title}
                     </div>
                     <div className = 'hab-description'>
@@ -36,17 +36,20 @@ const HomepageActionable = () =>{
         )
     }
 
+    const lrrDesc = "Sign up for your resume reviewed by real hiring managers or join us as we provide feedback for resumes";
+    const miDesc = "Sign up for an exclusive mock interview session with hiring managers within tech and healthcare";
+
     return (
         <div className="homepage-actionable-container">
             <div className = 'homepage-actionable-title'>
-                What we do
+                What we offer
             </div>
             <div className = 'homepage-actionable-widgets'>
-                <HomepageActionableBlock title = "Live Resume Review" description = "<TODO>" buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
-                <a className = 'homepage-actionable-youtube-button2' href = 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA"/live'>
+                <HomepageActionableBlock title = "Live Resume Review" description = {lrrDesc} buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
+                <a className = 'homepage-actionable-youtube-button' href = 'https://www.youtube.com/channel/UCzBE60pGkJ5MlHauZLOYLGA"/live'>
                     Watch on Youtube
                 </a>
-                <HomepageActionableBlock title = "Mock Interview" description = "<TODO>" buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
+                <HomepageActionableBlock title = "Mock Interview" description = {miDesc} buttonName= 'sign up' buttonURL='https://www.eventbrite.com/e/live-resume-review-session-with-key-note-speakers-target-companies-tickets-149955967335'/>
             </div>
         </div>
     );

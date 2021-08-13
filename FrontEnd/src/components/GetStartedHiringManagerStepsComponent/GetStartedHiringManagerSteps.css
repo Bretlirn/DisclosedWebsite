@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: flex-end;
     font-size: 32px;
-    font-family: "Roboto";
+    font-family: "Poppins";
     margin: 40px 100px;
 }
 
@@ -31,7 +31,7 @@
 .get-started-hiring-manager-steps-title{
     margin-top: 75px;
     margin-bottom: 75px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 48px;
 }
 
@@ -44,7 +44,7 @@
 
 .get-started-hiring-manager-questions{
     margin-bottom: 75px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 24px;
 }
 
@@ -56,7 +56,7 @@
     white-space: nowrap;
     margin-bottom: 75px;
     font-size: 32px;
-    font-family: "Roboto";
+    font-family: "Poppins";
 }
 
 .get-started-hiring-manager-steps-image{

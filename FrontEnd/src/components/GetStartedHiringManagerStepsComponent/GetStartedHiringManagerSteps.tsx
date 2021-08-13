@@ -27,7 +27,7 @@ const GetStartedHiringManagerSteps = () => {
 
                     <div className = 'get-started-hiring-manager-steps-item'>
                         <FaYoutube className = 'get-started-hiring-manager-steps-image' style = {{color: 'red'}} size = '1x'/>
-                        1 Hour Live Session
+                        1 Hour&nbsp;<a href = "https://www.youtube.com/watch?v=YgRCA-xWSlQ">Live Session </a>
                     </div>
 
                     <div className = 'get-started-hiring-manager-steps-item'>

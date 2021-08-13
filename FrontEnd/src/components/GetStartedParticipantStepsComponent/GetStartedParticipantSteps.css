@@ -17,7 +17,7 @@
     white-space: nowrap;
     margin-bottom: 50px;
     font-size: 32px;
-    font-family: "Roboto";
+    font-family: "Poppins";
 }
 
 .get-started-participant-steps-image{
@@ -35,7 +35,7 @@
     width: 175px;
     height: min-content;
     border-radius: 50px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 32px;
     text-align: center;
     transition: all 0.2s ease-in;
@@ -75,6 +75,6 @@
     margin-left: 10%;
     width: min-content;
     white-space: nowrap;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 16px;
 }
