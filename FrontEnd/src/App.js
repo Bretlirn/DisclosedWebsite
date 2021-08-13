@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useLayoutEffect, useState, } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/NavbarComponent/Navbar";
@@ -11,14 +11,17 @@ import AboutUs from "./Pages/AboutUs";
 import logo from './assets/logos/logo.png'
 import Footer from "./components/FooterComponent/Footer";
 
-function App() {
-
-  //states
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    console.log("in useEffect on app");
-    window.addEventListener('resize', setWidth(window.innerWidth));
-  });
+const App = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  
   if (width < 960){
     return(
       <div classname="App">
