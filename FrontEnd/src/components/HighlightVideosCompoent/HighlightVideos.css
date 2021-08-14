@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
 .highlight-videos-component{
     padding-top: 50px;
@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 .highlight-videos-title{
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 48px;
     font-weight: bold;
 }
@@ -51,24 +51,21 @@
     align-items: center;   
     position: relative;
 }
-.highlight-video-picture{
-    
-}
 
 .highlight-video-text-left{
     position: absolute;
-    left: 500px;
+    width: 30vw;
+    left: 480px;
     z-index: 1;
-    font-family: 'Roboto';
-    font-size: 36px;
-    white-space: nowrap;
+    font-family: 'Poppins';
+    font-size: 24px;
 }
 
 .highlight-video-text-right{
     position: absolute;
-    right: 500px;
+    right: 480px;
+    width: 30vw;
     z-index: 1;
-    font-family: 'Roboto';
-    font-size: 36px;
-    white-space: nowrap;
+    font-family: 'Poppins';
+    font-size: 24px;
 }

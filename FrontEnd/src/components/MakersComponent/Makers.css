@@ -1,7 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Alice);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
-.main-container {
+.makers-main-container {
     width: 100%;
     height: 100%;
     padding-top: 25px;
@@ -9,19 +8,19 @@
     padding-bottom: 25px;
 }
 
-.container {
+.makers-container {
   width: 100%;
   height: 100%
 }
 
-.founder {
+.makers-founder {
     display: flex;
     padding-top: 50px;
     width: 100%;
     justify-content: space-evenly;  
   }
 
-.leads {
+.makers-leads {
     display: flex;
     padding: 75px 50px;
     width: 100%;
@@ -29,29 +28,30 @@
     justify-content: space-evenly;
 }
 
-.image {
+.makers-image {
     width: 200px;
     height: 200px;
+    border-radius: 100px;
     color: black;
   }
 
-.name {
-    font-family: 'Alice';
+.makers-name {
+    font-family: 'Poppins';
     font-size: 30px;
     padding-top: 15px;
     font-weight: bold;
   }  
 
-.description {
-  font-family: 'Alice';
+.makers-description {
+  font-family: 'Poppins';
   font-size: 22px;
   padding-top: 15px;
   font-weight: 10px;
 }
 
-.makerheader {
+.makers-header {
     font-size: 50px;
-    font-family: 'Roboto';
+    font-family: 'Alice';
     text-align: center;
     padding-top: 5%;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
 .get-started-landing-container{
     display: flex;
@@ -6,7 +6,7 @@
 }
 
 .get-started-landing-title{
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-size: 42px;
     font-weight: bold;
     margin-top: 50px;
@@ -23,9 +23,9 @@
     padding: 25px;
     background-color: #C4C4C4;
     text-align: center;
-    margin: 25px 40px;
+    margin: 25px 25px;
     font-size: 30px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
 
 }
 
@@ -41,20 +41,24 @@
   pointer-events: none;
 }
 
-.get-started-landing-boxes {
-    font-size: 30px;
-    font-family: 'Roboto';
-
+.get-started-landing-boxes { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     width: 275px;
     height: 275px;
     background-color: #C4C4C4;
-    padding: 2rem 1rem;
+    /*padding: 2rem 1rem;*/
     cursor: pointer;
-
     pointer-events: auto;
     transition: 300ms opacity, 300ms transform;
+}
+
+.get-started-landing-boxes-text{
+  font-size: 24px;
+  font-family: 'Poppins';
 }
 
 .get-started-landing-boxes-container:hover > * {
@@ -64,14 +68,4 @@
 .get-started-landing-boxes:hover {
   transform: scale(1.1);
   opacity: 1;
-}
-
-@media (min-width: 40em) {
-  .get-started-landing-boxes-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .get-started-landing-boxes {
-    padding: 4rem 1rem;
-  }
 }

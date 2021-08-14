@@ -6,7 +6,11 @@ const GetStartedLanding = ({titles}:{
 }) => {
     const GetStartedLandingBoxes = (title: string) => {
         return(
-            <div className = 'get-started-landing-boxes'>{title}</div>
+            <div className = 'get-started-landing-boxes'>
+                <div className = "get-started-landing-boxes-text">
+                    {title}        
+                </div>
+            </div>
         );
     }
 

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/webpack-env": "^1.16.2"
+  },
+  "dependencies": {
+    "react-responsive": "*"
   }
 }

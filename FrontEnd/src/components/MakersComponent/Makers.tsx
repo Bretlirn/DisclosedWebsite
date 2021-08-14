@@ -12,12 +12,12 @@ const Makers = () => {
         image:string;
     }) => {
         return(
-            <div className = 'container'>
-                <img src = {image} alt = "Not found" className = "image"/>
-                <div className = 'name'>
+            <div className = 'makers-container'>
+                <img src = {image} alt = "Not found" className = "makers-image"/>
+                <div className = 'makers-name'>
                     {name}
                 </div>
-                <div className = 'description'>
+                <div className = 'makers-description'>
                     {description}
                 </div>
             </div>
@@ -25,16 +25,16 @@ const Makers = () => {
     }
 
   return (
-    <div className = "main-container">
-        <div className = "makerheader">
+    <div className = "makers-main-container">
+        <div className = "makers-header">
             <strong>
                 <p>Meet the Makers</p>
             </strong>
         </div>
-        <div className = "founder">
+        <div className = "makers-founder">
             <MakerBlock image = {michelle} name = "Michelle Chen" description = "Founder of Disclosed"/>
         </div>
-        <div className = "leads">
+        <div className = "makers-leads">
             <MakerBlock image = {vinson} name = "Vinson Chen" description = "Technology Systems Lead"/>
             <MakerBlock image = {fiona} name = "Fiona Li" description = "Marketing Lead"/>
             <MakerBlock image = {addison} name = "Addison Chen" description = "Partnership Lead"/>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '../util/imports.css';
 
 .NavbarItems{
     background: #222222; /*linear-gradient(0deg, black, #444444);*/
@@ -58,7 +57,7 @@
 .nav-links{
     font-size: 20px;
     color: white;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -82,7 +81,7 @@
 }
 
 .dropbtn {
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 20px;
@@ -91,7 +90,6 @@
     color: white;
     border: none;
     cursor: pointer;
-    font-family: 'Roboto';
     transition: all 0.2s ease-in;
 }
 
@@ -101,11 +99,11 @@
 }
 
 .dropdown-content {
-
-    border-radius: 10px;
+    border-radius: 12px;
     visibility: hidden;
     position: absolute;
-    border: #000 1px solid;
+    border-style: solid;
+    border-color: black;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -124,11 +122,11 @@
     color: black;
     padding: 12px 16px;
     display: block;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     transition: all 0.2s ease-in;
 }
 
-.dropdown-content a:hover {background-color: rgb(136,0,21); border-radius: 10px; color: #FFF; transition: all 0.2s ease-in;}
+.dropdown-content a:hover {background-color: rgb(136,0,21); color: #FFF; transition: all 0.2s ease-in;}
 
 .dropdown:hover .dropdown-content {
     visibility: visible;

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Alice);
-@import url('https://use.typekit.net/bok8vky.css');
+@import '../util/imports.css';
 
 .App {
     /* font-family: Impact; */
