@@ -1,0 +1,48 @@
+@import '../util/imports.css';
+
+.speaker-section-main-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    background-color: #EDEDED;
+    padding-bottom: 25px;
+}
+.speaker-section-row {
+    display: flex;
+    padding: 75px 50px;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+.speaker-section-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: "hidden";
+    color: black;
+  }
+
+.speaker-section-name {
+    font-family: 'Poppins';
+    font-size: 30px;
+    padding-top: 15px;
+  }
+
+.speaker-section-title {
+  font-family: 'Poppins';
+  font-size: 22px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+  
+.speaker-section-quote {
+  font-family: 'Poppins';
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.speaker-section-container{
+  width: 30%
+}

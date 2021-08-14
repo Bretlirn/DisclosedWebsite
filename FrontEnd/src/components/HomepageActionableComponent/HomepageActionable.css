@@ -1,0 +1,202 @@
+@import '../util/imports.css';
+
+.homepage-actionable-container{
+    margin-top: 25px;
+    height: 400px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow:1;
+}
+
+.homepage-actionable-widgets{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hab-container{
+    width: 300px;
+    height: 200px;
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background-color:#c4c4c4;
+}
+
+.homepage-actionable-title{
+    font-weight: bold;
+    font-size: 48px;
+    padding-top: 10px;
+    font-family: 'Poppins';
+}
+
+.homepage-actionable-button-title{
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 10px;
+    font-family: 'Poppins';
+}
+
+
+.hab-description{
+    font-size: 15px;
+    flex-grow: 4;
+    font-family: 'Poppins';
+}
+
+.homepage-actionable-button{
+    flex-grow: 2;
+    background-color: #486FA4;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border-color: #486FA4;
+    border-style: solid;
+    font-family: 'Roboto';
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.homepage-actionable-button:hover{
+    padding: 8px 20px;
+    border-radius: 25px;
+    border-color: #486FA4;
+    border-style: solid;
+    transition: all 0.3s ease-out;
+    background: #ffffff;
+    color: #486FA4;
+    transition: 250ms;
+}
+
+.homepage-actionable-youtube-button{
+    margin: 138px 50px 0px 50px;
+    margin-top: 138px;
+    text-align: center;
+    width: min-content;
+    height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Poppins';
+    background-color: rgb(136,0,21);
+    border-style: solid;
+    color: white;
+    padding: 8px 20px;
+    border-color: rgb(136,0,21);
+    border-radius: 25px;
+    transition: all 0.2s ease-in;
+    white-space: nowrap;
+}
+
+.homepage-actionable-youtube-button:hover{
+    background-color: white;
+    color: rgb(136,0,21);
+    border-color: rgb(136,0,21);
+    transition: all 0.2s ease-in;
+
+}
+
+
+/*Code we might need in the future*/
+/*.homepage-actionable-youtube{
+    position: relative;
+    cursor: pointer;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-icon{
+    visibility:hidden ;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-button{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-outline{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube:hover .homepage-actionable-youtube-hide-box{
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.homepage-actionable-youtube-button{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+    top:-60px;
+    left:-60px;
+    height: 120px;
+    width: 120px;
+    opacity: 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto';
+    outline: none;
+    cursor: pointer;
+    color: red;
+    transition: all 0.3s ease-in;
+    z-index: 3;
+}
+
+.homepage-actionable-youtube-icon{
+    position: absolute;
+    visibility:visible;
+    top:-75px;
+    left: -75px;
+    color: red;
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.homepage-actionable-youtube-outline{
+    position: absolute;
+    visibility: hidden;
+    top: -80px;
+    left: -80px;
+    color: red;
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.homepage-actionable-youtube-hide-box{
+    position: absolute;
+    visibility: hidden;
+    top:-30px;
+    left: -30px;
+    background-color: white;
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 2;
+}*/

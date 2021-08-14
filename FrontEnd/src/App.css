@@ -2,5 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+.app-logo{
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.app-logo-item {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+  /*transform: translate(-10%, 32%);*/
+}
+
+.app-logo-name{
+  color: #000000;
+  width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Bebas Neue";
+}
+
+.app-logo-name-center{
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }

@@ -1,0 +1,9 @@
+@import '../util/imports.css';
+
+.calendarheader {
+    font-size: 50px;
+    font-family: 'Poppins';
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
