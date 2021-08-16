@@ -1,11 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import '../util/imports.css';
 
 .speaker-container{
     /*background: var(--bgColor);*/
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-grow:1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex:1;
+        -ms-flex-positive:1;
+            flex-grow:1;
 }
 
 .speaker-header{
@@ -16,9 +30,15 @@
     font-size: 36px;
     text-align: center;
     white-space: pre-wrap;
-    transition-timing-function: ease;
-    transition-duration: 0.6s;
-    transition-delay: 0.3s;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: 0.6s;
+         -o-transition-duration: 0.6s;
+            transition-duration: 0.6s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
     margin-top: 10px;
     margin-bottom: 50px;
 }
@@ -27,10 +47,16 @@
     position:relative;
     height: 87%;
     width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     margin-bottom: 20px;
 }
 

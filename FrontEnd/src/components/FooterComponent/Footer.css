@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import '../util/imports.css';
 
 .App {
@@ -8,17 +15,24 @@
   /* SOCIAL STUFF */
 
   .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #eee;
     padding: 10px 50px;
     position: relative;
     width: 100%;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   a.social {
     margin: 15px;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    -o-transition: transform 250ms;
     transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
     display: inline-block
   }
 
@@ -37,7 +51,9 @@
   } 
 
   a.social:hover {
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
   }
   
   a.youtube {
