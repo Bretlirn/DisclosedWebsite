@@ -34,11 +34,11 @@ const Navbar = () => {
     ]
     return(
         <nav className = 'NavbarItems'>
-            <div className ='navbar-logo'><img src={logo} className = 'logo' alt = '???'/>
+            <a className ='navbar-logo' href = '/'><img src={logo} className = 'logo' alt = '???'/>
                 <div className = 'logo-name-center'>
                     <h1 className='logo-name'>Disclosed</h1>
                 </div>
-            </div>
+            </a>
             <div className = 'menu-icon' onClick={handleClick}>
                 <i className = {clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>
