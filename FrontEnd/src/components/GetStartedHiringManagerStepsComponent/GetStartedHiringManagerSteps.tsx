@@ -13,7 +13,7 @@ const GetStartedHiringManagerSteps = () => {
                 </div>
                 <div className = "get-started-hiring-manager-small-title">
                     Fill out the form&nbsp;
-                    <a href = "">here</a>.
+                    <a href = "https://forms.gle/RjKtZrWDWNk4aBJw7">here</a>.
                 </div>
             </div>
             <div className = "get-started-hiring-manager-steps-component">
